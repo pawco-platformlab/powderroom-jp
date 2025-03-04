@@ -1,0 +1,1894 @@
+<html>
+<head>
+    <title>POWDERROOM</title>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="57x57"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16"
+          href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/favicon-16x16.png">
+    <link rel="manifest" href="https://cf.dev.powderroom.mobi/assets/theme/powderroom/icon/manifest.json">
+    <script type="text/javascript" async="" src="https://cdn.channel.io/plugin/ch-plugin-web.js"></script>
+    <script src="https://cf.dev.powderroom.mobi/assets/vendor/htmx-2.0/htmx.min.js"></script>
+    <script nonce="7ax3vbGuVd0DFCW/cD5kRA==">
+        htmx.config.scrollIntoViewOnBoost = true;
+        htmx.config.inlineStyleNonce = "7ax3vbGuVd0DFCW/cD5kRA==";
+        htmx.config.refreshOnHistoryMiss = true;
+    </script>
+    <script></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/7.4.1/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>:root {
+        --swal2-container-padding: 0.625em;
+        --swal2-backdrop: rgba(0, 0, 0, 0.4);
+        --swal2-width: 32em;
+        --swal2-padding: 0 0 1.25em;
+        --swal2-border: none;
+        --swal2-border-radius: 0.3125rem;
+        --swal2-background: white;
+        --swal2-color: #545454;
+        --swal2-footer-border-color: #eee;
+        --swal2-show-animation: swal2-show 0.3s;
+        --swal2-hide-animation: swal2-hide 0.15s forwards;
+        --swal2-input-background: transparent;
+        --swal2-progress-step-background: #add8e6;
+        --swal2-validation-message-background: #f0f0f0;
+        --swal2-validation-message-color: #666;
+        --swal2-close-button-position: initial;
+        --swal2-close-button-inset: auto;
+        --swal2-close-button-font-size: 2.5em;
+        --swal2-close-button-color: #ccc
+    }
+
+    [data-swal2-theme=dark] {
+        --swal2-dark-theme-black: #19191a;
+        --swal2-dark-theme-white: #e1e1e1;
+        --swal2-background: var(--swal2-dark-theme-black);
+        --swal2-color: var(--swal2-dark-theme-white);
+        --swal2-footer-border-color: #555;
+        --swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);
+        --swal2-validation-message-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);
+        --swal2-validation-message-color: var(--swal2-dark-theme-white)
+    }
+
+    @media (prefers-color-scheme: dark) {
+        [data-swal2-theme=auto] {
+            --swal2-dark-theme-black: #19191a;
+            --swal2-dark-theme-white: #e1e1e1;
+            --swal2-background: var(--swal2-dark-theme-black);
+            --swal2-color: var(--swal2-dark-theme-white);
+            --swal2-footer-border-color: #555;
+            --swal2-input-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);
+            --swal2-validation-message-background: color-mix(in srgb, var(--swal2-dark-theme-black), var(--swal2-dark-theme-white) 10%);
+            --swal2-validation-message-color: var(--swal2-dark-theme-white)
+        }
+    }
+
+    body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown) {
+        overflow: hidden
+    }
+
+    body.swal2-height-auto {
+        height: auto !important
+    }
+
+    body.swal2-no-backdrop .swal2-container {
+        background-color: rgba(0, 0, 0, 0) !important;
+        pointer-events: none
+    }
+
+    body.swal2-no-backdrop .swal2-container .swal2-popup {
+        pointer-events: all
+    }
+
+    body.swal2-no-backdrop .swal2-container .swal2-modal {
+        box-shadow: 0 0 10px var(--swal2-backdrop)
+    }
+
+    body.swal2-toast-shown .swal2-container {
+        box-sizing: border-box;
+        width: 360px;
+        max-width: 100%;
+        background-color: rgba(0, 0, 0, 0);
+        pointer-events: none
+    }
+
+    body.swal2-toast-shown .swal2-container.swal2-top {
+        inset: 0 auto auto 50%;
+        transform: translateX(-50%)
+    }
+
+    body.swal2-toast-shown .swal2-container.swal2-top-end, body.swal2-toast-shown .swal2-container.swal2-top-right {
+        inset: 0 0 auto auto
+    }
+
+    body.swal2-toast-shown .swal2-container.swal2-top-start, body.swal2-toast-shown .swal2-container.swal2-top-left {
+        inset: 0 auto auto 0
+    }
+
+    body.swal2-toast-shown .swal2-container.swal2-center-start, body.swal2-toast-shown .swal2-container.swal2-center-left {
+        inset: 50% auto auto 0;
+        transform: translateY(-50%)
+    }
+
+    body.swal2-toast-shown .swal2-container.swal2-center {
+        inset: 50% auto auto 50%;
+        transform: translate(-50%, -50%)
+    }
+
+    body.swal2-toast-shown .swal2-container.swal2-center-end, body.swal2-toast-shown .swal2-container.swal2-center-right {
+        inset: 50% 0 auto auto;
+        transform: translateY(-50%)
+    }
+
+    body.swal2-toast-shown .swal2-container.swal2-bottom-start, body.swal2-toast-shown .swal2-container.swal2-bottom-left {
+        inset: auto auto 0 0
+    }
+
+    body.swal2-toast-shown .swal2-container.swal2-bottom {
+        inset: auto auto 0 50%;
+        transform: translateX(-50%)
+    }
+
+    body.swal2-toast-shown .swal2-container.swal2-bottom-end, body.swal2-toast-shown .swal2-container.swal2-bottom-right {
+        inset: auto 0 0 auto
+    }
+
+    @media print {
+        body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown) {
+            overflow-y: scroll !important
+        }
+
+        body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown) > [aria-hidden=true] {
+            display: none
+        }
+
+        body.swal2-shown:not(.swal2-no-backdrop,.swal2-toast-shown) .swal2-container {
+            position: static !important
+        }
+    }
+
+    div:where(.swal2-container) {
+        display: grid;
+        position: fixed;
+        z-index: 1060;
+        inset: 0;
+        box-sizing: border-box;
+        grid-template-areas:"top-start     top            top-end" "center-start  center         center-end" "bottom-start  bottom-center  bottom-end";
+        grid-template-rows:minmax(min-content, auto) minmax(min-content, auto) minmax(min-content, auto);
+        height: 100%;
+        padding: var(--swal2-container-padding);
+        overflow-x: hidden;
+        transition: background-color .1s;
+        -webkit-overflow-scrolling: touch
+    }
+
+    div:where(.swal2-container).swal2-backdrop-show, div:where(.swal2-container).swal2-noanimation {
+        background: var(--swal2-backdrop)
+    }
+
+    div:where(.swal2-container).swal2-backdrop-hide {
+        background: rgba(0, 0, 0, 0) !important
+    }
+
+    div:where(.swal2-container).swal2-top-start, div:where(.swal2-container).swal2-center-start, div:where(.swal2-container).swal2-bottom-start {
+        grid-template-columns:minmax(0, 1fr) auto auto
+    }
+
+    div:where(.swal2-container).swal2-top, div:where(.swal2-container).swal2-center, div:where(.swal2-container).swal2-bottom {
+        grid-template-columns:auto minmax(0, 1fr) auto
+    }
+
+    div:where(.swal2-container).swal2-top-end, div:where(.swal2-container).swal2-center-end, div:where(.swal2-container).swal2-bottom-end {
+        grid-template-columns:auto auto minmax(0, 1fr)
+    }
+
+    div:where(.swal2-container).swal2-top-start > .swal2-popup {
+        align-self: start
+    }
+
+    div:where(.swal2-container).swal2-top > .swal2-popup {
+        grid-column: 2;
+        place-self: start center
+    }
+
+    div:where(.swal2-container).swal2-top-end > .swal2-popup, div:where(.swal2-container).swal2-top-right > .swal2-popup {
+        grid-column: 3;
+        place-self: start end
+    }
+
+    div:where(.swal2-container).swal2-center-start > .swal2-popup, div:where(.swal2-container).swal2-center-left > .swal2-popup {
+        grid-row: 2;
+        align-self: center
+    }
+
+    div:where(.swal2-container).swal2-center > .swal2-popup {
+        grid-column: 2;
+        grid-row: 2;
+        place-self: center center
+    }
+
+    div:where(.swal2-container).swal2-center-end > .swal2-popup, div:where(.swal2-container).swal2-center-right > .swal2-popup {
+        grid-column: 3;
+        grid-row: 2;
+        place-self: center end
+    }
+
+    div:where(.swal2-container).swal2-bottom-start > .swal2-popup, div:where(.swal2-container).swal2-bottom-left > .swal2-popup {
+        grid-column: 1;
+        grid-row: 3;
+        align-self: end
+    }
+
+    div:where(.swal2-container).swal2-bottom > .swal2-popup {
+        grid-column: 2;
+        grid-row: 3;
+        place-self: end center
+    }
+
+    div:where(.swal2-container).swal2-bottom-end > .swal2-popup, div:where(.swal2-container).swal2-bottom-right > .swal2-popup {
+        grid-column: 3;
+        grid-row: 3;
+        place-self: end end
+    }
+
+    div:where(.swal2-container).swal2-grow-row > .swal2-popup, div:where(.swal2-container).swal2-grow-fullscreen > .swal2-popup {
+        grid-column: 1/4;
+        width: 100%
+    }
+
+    div:where(.swal2-container).swal2-grow-column > .swal2-popup, div:where(.swal2-container).swal2-grow-fullscreen > .swal2-popup {
+        grid-row: 1/4;
+        align-self: stretch
+    }
+
+    div:where(.swal2-container).swal2-no-transition {
+        transition: none !important
+    }
+
+    div:where(.swal2-container) div:where(.swal2-popup) {
+        display: none;
+        position: relative;
+        box-sizing: border-box;
+        grid-template-columns:minmax(0, 100%);
+        width: var(--swal2-width);
+        max-width: 100%;
+        padding: var(--swal2-padding);
+        border: var(--swal2-border);
+        border-radius: var(--swal2-border-radius);
+        background: var(--swal2-background);
+        color: var(--swal2-color);
+        font-family: inherit;
+        font-size: 1rem
+    }
+
+    div:where(.swal2-container) div:where(.swal2-popup):focus {
+        outline: none
+    }
+
+    div:where(.swal2-container) div:where(.swal2-popup).swal2-loading {
+        overflow-y: hidden
+    }
+
+    div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable {
+        cursor: grab
+    }
+
+    div:where(.swal2-container) div:where(.swal2-popup).swal2-draggable div:where(.swal2-icon) {
+        cursor: grab
+    }
+
+    div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging {
+        cursor: grabbing
+    }
+
+    div:where(.swal2-container) div:where(.swal2-popup).swal2-dragging div:where(.swal2-icon) {
+        cursor: grabbing
+    }
+
+    div:where(.swal2-container) h2:where(.swal2-title) {
+        position: relative;
+        max-width: 100%;
+        margin: 0;
+        padding: .8em 1em 0;
+        color: inherit;
+        font-size: 1.875em;
+        font-weight: 600;
+        text-align: center;
+        text-transform: none;
+        word-wrap: break-word;
+        cursor: initial
+    }
+
+    div:where(.swal2-container) div:where(.swal2-actions) {
+        display: flex;
+        z-index: 1;
+        box-sizing: border-box;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        width: auto;
+        margin: 1.25em auto 0;
+        padding: 0
+    }
+
+    div:where(.swal2-container) div:where(.swal2-actions):not(.swal2-loading) .swal2-styled[disabled] {
+        opacity: .4
+    }
+
+    div:where(.swal2-container) div:where(.swal2-actions):not(.swal2-loading) .swal2-styled:hover {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1))
+    }
+
+    div:where(.swal2-container) div:where(.swal2-actions):not(.swal2-loading) .swal2-styled:active {
+        background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2))
+    }
+
+    div:where(.swal2-container) div:where(.swal2-loader) {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        width: 2.2em;
+        height: 2.2em;
+        margin: 0 1.875em;
+        animation: swal2-rotate-loading 1.5s linear 0s infinite normal;
+        border-width: .25em;
+        border-style: solid;
+        border-radius: 100%;
+        border-color: #2778c4 rgba(0, 0, 0, 0) #2778c4 rgba(0, 0, 0, 0)
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled) {
+        margin: .3125em;
+        padding: .625em 1.1em;
+        transition: box-shadow .1s;
+        box-shadow: 0 0 0 3px rgba(0, 0, 0, 0);
+        font-weight: 500
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled):not([disabled]) {
+        cursor: pointer
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm) {
+        border: 0;
+        border-radius: .25em;
+        background: initial;
+        background-color: #7066e0;
+        color: #fff;
+        font-size: 1em
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-confirm):focus-visible {
+        box-shadow: 0 0 0 3px rgba(112, 102, 224, .5)
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny) {
+        border: 0;
+        border-radius: .25em;
+        background: initial;
+        background-color: #dc3741;
+        color: #fff;
+        font-size: 1em
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-deny):focus-visible {
+        box-shadow: 0 0 0 3px rgba(220, 55, 65, .5)
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel) {
+        border: 0;
+        border-radius: .25em;
+        background: initial;
+        background-color: #6e7881;
+        color: #fff;
+        font-size: 1em
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled):where(.swal2-cancel):focus-visible {
+        box-shadow: 0 0 0 3px rgba(110, 120, 129, .5)
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled).swal2-default-outline:focus-visible {
+        box-shadow: 0 0 0 3px rgba(100, 150, 200, .5)
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled):focus-visible {
+        outline: none
+    }
+
+    div:where(.swal2-container) button:where(.swal2-styled)::-moz-focus-inner {
+        border: 0
+    }
+
+    div:where(.swal2-container) div:where(.swal2-footer) {
+        margin: 1em 0 0;
+        padding: 1em 1em 0;
+        border-top: 1px solid var(--swal2-footer-border-color);
+        color: inherit;
+        font-size: 1em;
+        text-align: center;
+        cursor: initial
+    }
+
+    div:where(.swal2-container) .swal2-timer-progress-bar-container {
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        grid-column: auto !important;
+        overflow: hidden;
+        border-bottom-right-radius: var(--swal2-border-radius);
+        border-bottom-left-radius: var(--swal2-border-radius)
+    }
+
+    div:where(.swal2-container) div:where(.swal2-timer-progress-bar) {
+        width: 100%;
+        height: .25em;
+        background: rgba(0, 0, 0, .2)
+    }
+
+    div:where(.swal2-container) img:where(.swal2-image) {
+        max-width: 100%;
+        margin: 2em auto 1em;
+        cursor: initial
+    }
+
+    div:where(.swal2-container) button:where(.swal2-close) {
+        position: var(--swal2-close-button-position);
+        inset: var(--swal2-close-button-inset);
+        z-index: 2;
+        align-items: center;
+        justify-content: center;
+        width: 1.2em;
+        height: 1.2em;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: -1.2em;
+        padding: 0;
+        overflow: hidden;
+        transition: color .1s, box-shadow .1s;
+        border: none;
+        border-radius: var(--swal2-border-radius);
+        background: rgba(0, 0, 0, 0);
+        color: var(--swal2-close-button-color);
+        font-family: monospace;
+        font-size: var(--swal2-close-button-font-size);
+        cursor: pointer;
+        justify-self: end
+    }
+
+    div:where(.swal2-container) button:where(.swal2-close):hover {
+        transform: none;
+        background: rgba(0, 0, 0, 0);
+        color: #f27474
+    }
+
+    div:where(.swal2-container) button:where(.swal2-close):focus-visible {
+        outline: none;
+        box-shadow: inset 0 0 0 3px rgba(100, 150, 200, .5)
+    }
+
+    div:where(.swal2-container) button:where(.swal2-close)::-moz-focus-inner {
+        border: 0
+    }
+
+    div:where(.swal2-container) div:where(.swal2-html-container) {
+        z-index: 1;
+        justify-content: center;
+        margin: 0;
+        padding: 1em 1.6em .3em;
+        overflow: auto;
+        color: inherit;
+        font-size: 1.125em;
+        font-weight: normal;
+        line-height: normal;
+        text-align: center;
+        word-wrap: break-word;
+        word-break: break-word;
+        cursor: initial
+    }
+
+    div:where(.swal2-container) input:where(.swal2-input), div:where(.swal2-container) input:where(.swal2-file), div:where(.swal2-container) textarea:where(.swal2-textarea), div:where(.swal2-container) select:where(.swal2-select), div:where(.swal2-container) div:where(.swal2-radio), div:where(.swal2-container) label:where(.swal2-checkbox) {
+        margin: 1em 2em 3px
+    }
+
+    div:where(.swal2-container) input:where(.swal2-input), div:where(.swal2-container) input:where(.swal2-file), div:where(.swal2-container) textarea:where(.swal2-textarea) {
+        box-sizing: border-box;
+        width: auto;
+        transition: border-color .1s, box-shadow .1s;
+        border: 1px solid #d9d9d9;
+        border-radius: .1875em;
+        background: var(--swal2-input-background);
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .06), 0 0 0 3px rgba(0, 0, 0, 0);
+        color: inherit;
+        font-size: 1.125em
+    }
+
+    div:where(.swal2-container) input:where(.swal2-input).swal2-inputerror, div:where(.swal2-container) input:where(.swal2-file).swal2-inputerror, div:where(.swal2-container) textarea:where(.swal2-textarea).swal2-inputerror {
+        border-color: #f27474 !important;
+        box-shadow: 0 0 2px #f27474 !important
+    }
+
+    div:where(.swal2-container) input:where(.swal2-input):focus, div:where(.swal2-container) input:where(.swal2-file):focus, div:where(.swal2-container) textarea:where(.swal2-textarea):focus {
+        border: 1px solid #b4dbed;
+        outline: none;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .06), 0 0 0 3px rgba(100, 150, 200, .5)
+    }
+
+    div:where(.swal2-container) input:where(.swal2-input)::placeholder, div:where(.swal2-container) input:where(.swal2-file)::placeholder, div:where(.swal2-container) textarea:where(.swal2-textarea)::placeholder {
+        color: #ccc
+    }
+
+    div:where(.swal2-container) .swal2-range {
+        margin: 1em 2em 3px;
+        background: var(--swal2-background)
+    }
+
+    div:where(.swal2-container) .swal2-range input {
+        width: 80%
+    }
+
+    div:where(.swal2-container) .swal2-range output {
+        width: 20%;
+        color: inherit;
+        font-weight: 600;
+        text-align: center
+    }
+
+    div:where(.swal2-container) .swal2-range input, div:where(.swal2-container) .swal2-range output {
+        height: 2.625em;
+        padding: 0;
+        font-size: 1.125em;
+        line-height: 2.625em
+    }
+
+    div:where(.swal2-container) .swal2-input {
+        height: 2.625em;
+        padding: 0 .75em
+    }
+
+    div:where(.swal2-container) .swal2-file {
+        width: 75%;
+        margin-right: auto;
+        margin-left: auto;
+        background: var(--swal2-input-background);
+        font-size: 1.125em
+    }
+
+    div:where(.swal2-container) .swal2-textarea {
+        height: 6.75em;
+        padding: .75em
+    }
+
+    div:where(.swal2-container) .swal2-select {
+        min-width: 50%;
+        max-width: 100%;
+        padding: .375em .625em;
+        background: var(--swal2-input-background);
+        color: inherit;
+        font-size: 1.125em
+    }
+
+    div:where(.swal2-container) .swal2-radio, div:where(.swal2-container) .swal2-checkbox {
+        align-items: center;
+        justify-content: center;
+        background: var(--swal2-background);
+        color: inherit
+    }
+
+    div:where(.swal2-container) .swal2-radio label, div:where(.swal2-container) .swal2-checkbox label {
+        margin: 0 .6em;
+        font-size: 1.125em
+    }
+
+    div:where(.swal2-container) .swal2-radio input, div:where(.swal2-container) .swal2-checkbox input {
+        flex-shrink: 0;
+        margin: 0 .4em
+    }
+
+    div:where(.swal2-container) label:where(.swal2-input-label) {
+        display: flex;
+        justify-content: center;
+        margin: 1em auto 0
+    }
+
+    div:where(.swal2-container) div:where(.swal2-validation-message) {
+        align-items: center;
+        justify-content: center;
+        margin: 1em 0 0;
+        padding: .625em;
+        overflow: hidden;
+        background: var(--swal2-validation-message-background);
+        color: var(--swal2-validation-message-color);
+        font-size: 1em;
+        font-weight: 300
+    }
+
+    div:where(.swal2-container) div:where(.swal2-validation-message)::before {
+        content: "!";
+        display: inline-block;
+        width: 1.5em;
+        min-width: 1.5em;
+        height: 1.5em;
+        margin: 0 .625em;
+        border-radius: 50%;
+        background-color: #f27474;
+        color: #fff;
+        font-weight: 600;
+        line-height: 1.5em;
+        text-align: center
+    }
+
+    div:where(.swal2-container) .swal2-progress-steps {
+        flex-wrap: wrap;
+        align-items: center;
+        max-width: 100%;
+        margin: 1.25em auto;
+        padding: 0;
+        background: rgba(0, 0, 0, 0);
+        font-weight: 600
+    }
+
+    div:where(.swal2-container) .swal2-progress-steps li {
+        display: inline-block;
+        position: relative
+    }
+
+    div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step {
+        z-index: 20;
+        flex-shrink: 0;
+        width: 2em;
+        height: 2em;
+        border-radius: 2em;
+        background: #2778c4;
+        color: #fff;
+        line-height: 2em;
+        text-align: center
+    }
+
+    div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step {
+        background: #2778c4
+    }
+
+    div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step {
+        background: var(--swal2-progress-step-background);
+        color: #fff
+    }
+
+    div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step.swal2-active-progress-step ~ .swal2-progress-step-line {
+        background: var(--swal2-progress-step-background)
+    }
+
+    div:where(.swal2-container) .swal2-progress-steps .swal2-progress-step-line {
+        z-index: 10;
+        flex-shrink: 0;
+        width: 2.5em;
+        height: .4em;
+        margin: 0 -1px;
+        background: #2778c4
+    }
+
+    div:where(.swal2-icon) {
+        position: relative;
+        box-sizing: content-box;
+        justify-content: center;
+        width: 5em;
+        height: 5em;
+        margin: 2.5em auto .6em;
+        border: .25em solid rgba(0, 0, 0, 0);
+        border-radius: 50%;
+        border-color: #000;
+        font-family: inherit;
+        line-height: 5em;
+        cursor: default;
+        user-select: none
+    }
+
+    div:where(.swal2-icon) .swal2-icon-content {
+        display: flex;
+        align-items: center;
+        font-size: 3.75em
+    }
+
+    div:where(.swal2-icon).swal2-error {
+        border-color: #f27474;
+        color: #f27474
+    }
+
+    div:where(.swal2-icon).swal2-error .swal2-x-mark {
+        position: relative;
+        flex-grow: 1
+    }
+
+    div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line] {
+        display: block;
+        position: absolute;
+        top: 2.3125em;
+        width: 2.9375em;
+        height: .3125em;
+        border-radius: .125em;
+        background-color: #f27474
+    }
+
+    div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=left] {
+        left: 1.0625em;
+        transform: rotate(45deg)
+    }
+
+    div:where(.swal2-icon).swal2-error [class^=swal2-x-mark-line][class$=right] {
+        right: 1em;
+        transform: rotate(-45deg)
+    }
+
+    div:where(.swal2-icon).swal2-error.swal2-icon-show {
+        animation: swal2-animate-error-icon .5s
+    }
+
+    div:where(.swal2-icon).swal2-error.swal2-icon-show .swal2-x-mark {
+        animation: swal2-animate-error-x-mark .5s
+    }
+
+    div:where(.swal2-icon).swal2-warning {
+        border-color: #f8bb86;
+        color: #f8bb86
+    }
+
+    div:where(.swal2-icon).swal2-warning.swal2-icon-show {
+        animation: swal2-animate-error-icon .5s
+    }
+
+    div:where(.swal2-icon).swal2-warning.swal2-icon-show .swal2-icon-content {
+        animation: swal2-animate-i-mark .5s
+    }
+
+    div:where(.swal2-icon).swal2-info {
+        border-color: #3fc3ee;
+        color: #3fc3ee
+    }
+
+    div:where(.swal2-icon).swal2-info.swal2-icon-show {
+        animation: swal2-animate-error-icon .5s
+    }
+
+    div:where(.swal2-icon).swal2-info.swal2-icon-show .swal2-icon-content {
+        animation: swal2-animate-i-mark .8s
+    }
+
+    div:where(.swal2-icon).swal2-question {
+        border-color: #87adbd;
+        color: #87adbd
+    }
+
+    div:where(.swal2-icon).swal2-question.swal2-icon-show {
+        animation: swal2-animate-error-icon .5s
+    }
+
+    div:where(.swal2-icon).swal2-question.swal2-icon-show .swal2-icon-content {
+        animation: swal2-animate-question-mark .8s
+    }
+
+    div:where(.swal2-icon).swal2-success {
+        border-color: #a5dc86;
+        color: #a5dc86
+    }
+
+    div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line] {
+        position: absolute;
+        width: 3.75em;
+        height: 7.5em;
+        border-radius: 50%
+    }
+
+    div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=left] {
+        top: -0.4375em;
+        left: -2.0635em;
+        transform: rotate(-45deg);
+        transform-origin: 3.75em 3.75em;
+        border-radius: 7.5em 0 0 7.5em
+    }
+
+    div:where(.swal2-icon).swal2-success [class^=swal2-success-circular-line][class$=right] {
+        top: -0.6875em;
+        left: 1.875em;
+        transform: rotate(-45deg);
+        transform-origin: 0 3.75em;
+        border-radius: 0 7.5em 7.5em 0
+    }
+
+    div:where(.swal2-icon).swal2-success .swal2-success-ring {
+        position: absolute;
+        z-index: 2;
+        top: -0.25em;
+        left: -0.25em;
+        box-sizing: content-box;
+        width: 100%;
+        height: 100%;
+        border: .25em solid rgba(165, 220, 134, .3);
+        border-radius: 50%
+    }
+
+    div:where(.swal2-icon).swal2-success .swal2-success-fix {
+        position: absolute;
+        z-index: 1;
+        top: .5em;
+        left: 1.625em;
+        width: .4375em;
+        height: 5.625em;
+        transform: rotate(-45deg)
+    }
+
+    div:where(.swal2-icon).swal2-success [class^=swal2-success-line] {
+        display: block;
+        position: absolute;
+        z-index: 2;
+        height: .3125em;
+        border-radius: .125em;
+        background-color: #a5dc86
+    }
+
+    div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=tip] {
+        top: 2.875em;
+        left: .8125em;
+        width: 1.5625em;
+        transform: rotate(45deg)
+    }
+
+    div:where(.swal2-icon).swal2-success [class^=swal2-success-line][class$=long] {
+        top: 2.375em;
+        right: .5em;
+        width: 2.9375em;
+        transform: rotate(-45deg)
+    }
+
+    div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-tip {
+        animation: swal2-animate-success-line-tip .75s
+    }
+
+    div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-line-long {
+        animation: swal2-animate-success-line-long .75s
+    }
+
+    div:where(.swal2-icon).swal2-success.swal2-icon-show .swal2-success-circular-line-right {
+        animation: swal2-rotate-success-circular-line 4.25s ease-in
+    }
+
+    [class^=swal2] {
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+    }
+
+    .swal2-show {
+        animation: var(--swal2-show-animation)
+    }
+
+    .swal2-hide {
+        animation: var(--swal2-hide-animation)
+    }
+
+    .swal2-noanimation {
+        transition: none
+    }
+
+    .swal2-scrollbar-measure {
+        position: absolute;
+        top: -9999px;
+        width: 50px;
+        height: 50px;
+        overflow: scroll
+    }
+
+    .swal2-rtl .swal2-close {
+        margin-right: initial;
+        margin-left: 0
+    }
+
+    .swal2-rtl .swal2-timer-progress-bar {
+        right: 0;
+        left: auto
+    }
+
+    .swal2-toast {
+        box-sizing: border-box;
+        grid-column: 1/4 !important;
+        grid-row: 1/4 !important;
+        grid-template-columns:min-content auto min-content;
+        padding: 1em;
+        overflow-y: hidden;
+        background: var(--swal2-background);
+        box-shadow: 0 0 1px rgba(0, 0, 0, .075), 0 1px 2px rgba(0, 0, 0, .075), 1px 2px 4px rgba(0, 0, 0, .075), 1px 3px 8px rgba(0, 0, 0, .075), 2px 4px 16px rgba(0, 0, 0, .075);
+        pointer-events: all
+    }
+
+    .swal2-toast > * {
+        grid-column: 2
+    }
+
+    .swal2-toast h2:where(.swal2-title) {
+        margin: .5em 1em;
+        padding: 0;
+        font-size: 1em;
+        text-align: initial
+    }
+
+    .swal2-toast .swal2-loading {
+        justify-content: center
+    }
+
+    .swal2-toast input:where(.swal2-input) {
+        height: 2em;
+        margin: .5em;
+        font-size: 1em
+    }
+
+    .swal2-toast .swal2-validation-message {
+        font-size: 1em
+    }
+
+    .swal2-toast div:where(.swal2-footer) {
+        margin: .5em 0 0;
+        padding: .5em 0 0;
+        font-size: .8em
+    }
+
+    .swal2-toast button:where(.swal2-close) {
+        grid-column: 3/3;
+        grid-row: 1/99;
+        align-self: center;
+        width: .8em;
+        height: .8em;
+        margin: 0;
+        font-size: 2em
+    }
+
+    .swal2-toast div:where(.swal2-html-container) {
+        margin: .5em 1em;
+        padding: 0;
+        overflow: initial;
+        font-size: 1em;
+        text-align: initial
+    }
+
+    .swal2-toast div:where(.swal2-html-container):empty {
+        padding: 0
+    }
+
+    .swal2-toast .swal2-loader {
+        grid-column: 1;
+        grid-row: 1/99;
+        align-self: center;
+        width: 2em;
+        height: 2em;
+        margin: .25em
+    }
+
+    .swal2-toast .swal2-icon {
+        grid-column: 1;
+        grid-row: 1/99;
+        align-self: center;
+        width: 2em;
+        min-width: 2em;
+        height: 2em;
+        margin: 0 .5em 0 0
+    }
+
+    .swal2-toast .swal2-icon .swal2-icon-content {
+        display: flex;
+        align-items: center;
+        font-size: 1.8em;
+        font-weight: bold
+    }
+
+    .swal2-toast .swal2-icon.swal2-success .swal2-success-ring {
+        width: 2em;
+        height: 2em
+    }
+
+    .swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line] {
+        top: .875em;
+        width: 1.375em
+    }
+
+    .swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left] {
+        left: .3125em
+    }
+
+    .swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right] {
+        right: .3125em
+    }
+
+    .swal2-toast div:where(.swal2-actions) {
+        justify-content: flex-start;
+        height: auto;
+        margin: 0;
+        margin-top: .5em;
+        padding: 0 .5em
+    }
+
+    .swal2-toast button:where(.swal2-styled) {
+        margin: .25em .5em;
+        padding: .4em .6em;
+        font-size: 1em
+    }
+
+    .swal2-toast .swal2-success {
+        border-color: #a5dc86
+    }
+
+    .swal2-toast .swal2-success [class^=swal2-success-circular-line] {
+        position: absolute;
+        width: 1.6em;
+        height: 3em;
+        border-radius: 50%
+    }
+
+    .swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left] {
+        top: -0.8em;
+        left: -0.5em;
+        transform: rotate(-45deg);
+        transform-origin: 2em 2em;
+        border-radius: 4em 0 0 4em
+    }
+
+    .swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right] {
+        top: -0.25em;
+        left: .9375em;
+        transform-origin: 0 1.5em;
+        border-radius: 0 4em 4em 0
+    }
+
+    .swal2-toast .swal2-success .swal2-success-ring {
+        width: 2em;
+        height: 2em
+    }
+
+    .swal2-toast .swal2-success .swal2-success-fix {
+        top: 0;
+        left: .4375em;
+        width: .4375em;
+        height: 2.6875em
+    }
+
+    .swal2-toast .swal2-success [class^=swal2-success-line] {
+        height: .3125em
+    }
+
+    .swal2-toast .swal2-success [class^=swal2-success-line][class$=tip] {
+        top: 1.125em;
+        left: .1875em;
+        width: .75em
+    }
+
+    .swal2-toast .swal2-success [class^=swal2-success-line][class$=long] {
+        top: .9375em;
+        right: .1875em;
+        width: 1.375em
+    }
+
+    .swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip {
+        animation: swal2-toast-animate-success-line-tip .75s
+    }
+
+    .swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long {
+        animation: swal2-toast-animate-success-line-long .75s
+    }
+
+    .swal2-toast.swal2-show {
+        animation: swal2-toast-show .5s
+    }
+
+    .swal2-toast.swal2-hide {
+        animation: swal2-toast-hide .1s forwards
+    }
+
+    @keyframes swal2-show {
+        0% {
+            transform: scale(0.7)
+        }
+        45% {
+            transform: scale(1.05)
+        }
+        80% {
+            transform: scale(0.95)
+        }
+        100% {
+            transform: scale(1)
+        }
+    }
+
+    @keyframes swal2-hide {
+        0% {
+            transform: scale(1);
+            opacity: 1
+        }
+        100% {
+            transform: scale(0.5);
+            opacity: 0
+        }
+    }
+
+    @keyframes swal2-animate-success-line-tip {
+        0% {
+            top: 1.1875em;
+            left: .0625em;
+            width: 0
+        }
+        54% {
+            top: 1.0625em;
+            left: .125em;
+            width: 0
+        }
+        70% {
+            top: 2.1875em;
+            left: -0.375em;
+            width: 3.125em
+        }
+        84% {
+            top: 3em;
+            left: 1.3125em;
+            width: 1.0625em
+        }
+        100% {
+            top: 2.8125em;
+            left: .8125em;
+            width: 1.5625em
+        }
+    }
+
+    @keyframes swal2-animate-success-line-long {
+        0% {
+            top: 3.375em;
+            right: 2.875em;
+            width: 0
+        }
+        65% {
+            top: 3.375em;
+            right: 2.875em;
+            width: 0
+        }
+        84% {
+            top: 2.1875em;
+            right: 0;
+            width: 3.4375em
+        }
+        100% {
+            top: 2.375em;
+            right: .5em;
+            width: 2.9375em
+        }
+    }
+
+    @keyframes swal2-rotate-success-circular-line {
+        0% {
+            transform: rotate(-45deg)
+        }
+        5% {
+            transform: rotate(-45deg)
+        }
+        12% {
+            transform: rotate(-405deg)
+        }
+        100% {
+            transform: rotate(-405deg)
+        }
+    }
+
+    @keyframes swal2-animate-error-x-mark {
+        0% {
+            margin-top: 1.625em;
+            transform: scale(0.4);
+            opacity: 0
+        }
+        50% {
+            margin-top: 1.625em;
+            transform: scale(0.4);
+            opacity: 0
+        }
+        80% {
+            margin-top: -0.375em;
+            transform: scale(1.15)
+        }
+        100% {
+            margin-top: 0;
+            transform: scale(1);
+            opacity: 1
+        }
+    }
+
+    @keyframes swal2-animate-error-icon {
+        0% {
+            transform: rotateX(100deg);
+            opacity: 0
+        }
+        100% {
+            transform: rotateX(0deg);
+            opacity: 1
+        }
+    }
+
+    @keyframes swal2-rotate-loading {
+        0% {
+            transform: rotate(0deg)
+        }
+        100% {
+            transform: rotate(360deg)
+        }
+    }
+
+    @keyframes swal2-animate-question-mark {
+        0% {
+            transform: rotateY(-360deg)
+        }
+        100% {
+            transform: rotateY(0)
+        }
+    }
+
+    @keyframes swal2-animate-i-mark {
+        0% {
+            transform: rotateZ(45deg);
+            opacity: 0
+        }
+        25% {
+            transform: rotateZ(-25deg);
+            opacity: .4
+        }
+        50% {
+            transform: rotateZ(15deg);
+            opacity: .8
+        }
+        75% {
+            transform: rotateZ(-5deg);
+            opacity: 1
+        }
+        100% {
+            transform: rotateX(0);
+            opacity: 1
+        }
+    }
+
+    @keyframes swal2-toast-show {
+        0% {
+            transform: translateY(-0.625em) rotateZ(2deg)
+        }
+        33% {
+            transform: translateY(0) rotateZ(-2deg)
+        }
+        66% {
+            transform: translateY(0.3125em) rotateZ(2deg)
+        }
+        100% {
+            transform: translateY(0) rotateZ(0deg)
+        }
+    }
+
+    @keyframes swal2-toast-hide {
+        100% {
+            transform: rotateZ(1deg);
+            opacity: 0
+        }
+    }
+
+    @keyframes swal2-toast-animate-success-line-tip {
+        0% {
+            top: .5625em;
+            left: .0625em;
+            width: 0
+        }
+        54% {
+            top: .125em;
+            left: .125em;
+            width: 0
+        }
+        70% {
+            top: .625em;
+            left: -0.25em;
+            width: 1.625em
+        }
+        84% {
+            top: 1.0625em;
+            left: .75em;
+            width: .5em
+        }
+        100% {
+            top: 1.125em;
+            left: .1875em;
+            width: .75em
+        }
+    }
+
+    @keyframes swal2-toast-animate-success-line-long {
+        0% {
+            top: 1.625em;
+            right: 1.375em;
+            width: 0
+        }
+        65% {
+            top: 1.25em;
+            right: .9375em;
+            width: 0
+        }
+        84% {
+            top: .9375em;
+            right: 0;
+            width: 1.125em
+        }
+        100% {
+            top: .9375em;
+            right: .1875em;
+            width: 1.375em
+        }
+    }</style>
+    <link href="https://cdn.jsdelivr.net/npm/jquery.rateit@1.1.6/scripts/rateit.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@4.0.1/reset.min.css">
+    <link rel="stylesheet" href="../assets/theme/powderroom/css/style.2.0.8.css">
+    <link rel="stylesheet" href="../assets/theme/powderroom/css/custom.2.1.5.4.css">
+    <style nonce="7ax3vbGuVd0DFCW/cD5kRA==">
+        @viewport {
+            zoom: 1;
+            width: device-width;
+            height: device-height;
+        }
+
+        .common-wrap header button.btn-header-left {
+            z-index: 100;
+        }
+
+        .address-error .error {
+            display: none;
+        }
+
+        hr.divider {
+            opacity: 1;
+        }
+
+        button.bg-black {
+            background-color: #000000 !important;
+            color: #fff !important;
+        }
+
+        #search-submit-button,
+        #search-cancel-button {
+            background: #f2f3f6;
+            padding: 0 0 0 10px;
+        }
+
+        .detail-box .content {
+            word-break: break-all;
+        }
+
+        .product-box .no-list {
+            padding: 41px 0 36px !important;
+            text-align: center !important;
+            background-color: #f6f9ff !important;
+            border-radius: 0 !important;
+            margin-bottom: 0 !important;
+        }
+
+        .htmx-loading,
+        .htmx-loading-center {
+            background-color: transparent !important;
+        }
+
+        .brand-main .product-container .tab-depth3-empty {
+            padding-top: 16px;
+        }
+
+        .mypage-popup {
+            max-height: 500px;
+            overflow-y: auto;
+            padding: 20px;
+            overscroll-behavior: none;
+        }
+
+        button.submit-btn {
+            background-color: #ebf0fb;
+            color: #fff;
+        }
+
+        button.status-lightgray {
+            background-color: #eceef2;
+            color: #222;
+        }
+    </style>
+    <style nonce="7ax3vbGuVd0DFCW/cD5kRA==">
+        body {
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"><text x="100" y="100" fill="%23ddd" font-family="Arial" font-size="20" font-weight="bold" text-anchor="middle" dominant-baseline="middle" transform="rotate(45 100 100)">production</text></svg>') !important;
+            background-repeat: repeat;
+            background-size: 200px !important;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery.rateit@1.1.6/scripts/jquery.rateit.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.full.min.js"
+            integrity="sha512-RtZU3AyMVArmHLiW0suEZ9McadTdegwbgtiQl5Qqo9kunkVg1ofwueXD8/8wv3Af8jkME3DDe3yLfR8HSJfT2g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/i18n/ja.min.js"
+            integrity="sha512-F3rumY/Kl8PDQPZarAHVxniZnEz60v6B/RMrZDrwjPCIDWQsJoeFpef/Mzx09CebCWPHvrI097BbQ1GtP+P0SQ=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+          integrity="sha512-nMNlpuaDPrqlEls3IX/Q56H36qvBASwb3ipuo3MxeWbsQB1881ox0cRv7UPTgBlriqoynt35KjEwgGUeUXIPnw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://cf.dev.powderroom.mobi/assets/dist/theme/powderroom/validator/validator-1.0.1.min.js"></script>
+    <script src="https://cf.dev.powderroom.mobi/assets/dist/theme/powderroom/custom/custom-1.0.1.min.js"></script>
+    <script src="https://cf.dev.powderroom.mobi/assets/vendor/cht.0.0.1.js"></script>
+    <style nonce="7ax3vbGuVd0DFCW/cD5kRA==">      .htmx-indicator {
+        opacity: 0
+    }
+
+    .htmx-request .htmx-indicator {
+        opacity: 1;
+        transition: opacity 200ms ease-in;
+    }
+
+    .htmx-request.htmx-indicator {
+        opacity: 1;
+        transition: opacity 200ms ease-in;
+    }      </style>
+</head>
+
+<body>
+<div class="main-new-page-wrap common-wrap push-alarm-wrap">
+    <header>
+        <button type="button" class="logo" onclick="window.location.href='/'"><img
+                src="https://cf.powderroom.mobi/assets/theme/powderroom/images/img-logo-top.png" alt="POWDER ROOM">
+        </button>
+        <button type="button"></button>
+    </header>
+    <input type="hidden" id="referer" value=""> <input type="hidden" id="product-index" value=""> <input type="hidden"
+                                                                                                         id="twitter_user_id"
+                                                                                                         value="">
+    <div class="main-new">
+        <div id="limepie-contents" class="">
+            <header>
+                <button type="button" class="btn-header-left" data-move-page="back"><img
+                        src="https://cf.powderroom.mobi/assets/theme/powderroom/images/icon-header-back.png" alt="">
+                </button>
+                <h2>プッシュ通知の設定</h2></header>
+            <style> .setting-box li {
+                cursor: pointer;
+            }
+
+            .mypage-popup {
+                padding: 20px;
+                padding-bottom: 100px;
+                background-color: #fff;
+                max-height: 500px;
+                overflow-y: auto;
+            }
+
+            .floating-footer button {
+                height: 60px;
+                width: 100%;
+                color: #fff;
+                font-weight: 700;
+                font-size: 16px;
+                background-color: #2a3548;
+            }
+
+            input[type="text"], textarea, select {
+                font-size: 16px;
+            }</style>
+            <div class="mypage-content common-content">
+                <div class="setting-box">
+                    <div class="push-setting-wrap">
+                        <div class="push-popup-title-wrap">
+                            <div class="push-popup-title">
+                                プッシュ通知の設定
+                            </div>
+                            <div>
+                                <!-- 토글 온오프 확인 -->
+                                <button class="toggle off">off</button>
+                                <!-- <button class="toggle on">on</button> -->
+                            </div>
+                        </div>
+                        <div class="push-popup-desc-wrap">
+                            通知受信の同意とともに、<span>個人情報のマーケティング利用</span>に同意していただくことになります
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-dim-wrap" id="popup2" style="display: none; z-index: 999999">
+                <div class="popup-content-wrap">
+                    <div class="popup-header"> サービスの利用規約
+                        <button type="button" onclick="$('#popup2').hide();"><img
+                                src="https://cf.powderroom.mobi/assets/theme/powderroom/images/icon-top-close-black.png"
+                                alt=""></button>
+                    </div>
+                    <div class="popup-content mypage-popup" style="background: white">
+                        <div class="form-box">
+                            <div class="form-item">
+                                <pre style="line-height: 150%; width: 100%; white-space: pre-wrap">[第1章 総則] 第1条（目的） 本約款は株式会社PAWCOMPANY(以下「会社」)が運営するPowderroom JPサービス(以下「サービス」)を利用するにあたり、利用者の権利·義務及び責任事項、サービス利用条件及び手続きなど基本的な事項を規定することを目的としています。 第2条（用語の定義） この約款で使用する用語の定義は次のとおりです。 ① 会員:サービスに会員登録をした者で、本約款に同意して会社が提供するサービスを継続的に利用できる者をいいます。 ② ID:会員の識別及びサービス利用のため、会員登録時に認証を受けた本人のメールアドレスを意味します。 ③ ニックネーム:会員がID(メールアドレス)の他に別途指定した固有の名称です。 ④ 体験団:提供商品のレビュアーを募集するなど、製品の広報やマーケティングのための一連のプロモーション活動を指します。 ⑤ レビュアー:体験団に申し込んだ後、当選して提供商品(以下で定義される)を提供され、その条件で提供商品に対するレビューを作成、共有する会員のことです。 ⑥ レビュー:体験団提供商品をテーマに創作された作品のことです。 体験団提供商品を活用して会員が掲示または登録する符号、文字、音声、音響、映像、イメージなどの形態の文および各種ファイルとリンクなどを意味します。 ⑦ 提供商品:体験団に関して、会員が会社が定めた規定により当選した後、レビュー作成を目的として、無償で提供される現物商品、サンプルなどを意味します。 ⑧ パートナー:会員に提供商品を提供したり、広告性情報を依頼する広告主業者および商品を提供するブランドおよび業者を意味します。 第3条（約款の効力及び改正） ① 本約款はサービス初期画面およびMYページに掲示して会員に通知し、会員がサービス会員登録時にこれに同意することで効力が発生します。 ただし、約款の具体的な内容は、会員が接続画面を通じて見ることができます。 ② 会社は、会員が本約款に同意する前に、本約款に定められている内容のうち、契約の申込みの撤回、配送責任、払い戻し条件などの重要な内容を会員が理解できるよう、別途の接続画面またはポップアップ画面などを提供し、会員の確認を求めています。 ③ 会社は「電子商取引等における消費者保護に関する法律」、「約款の規制に関する法律」、「電子文書及び電子取引基本法」、「電子署名法」、「情報通信網利用促進及び情報保護等に関する法律」等、関連法令及び行政規則に違反しない範囲で本約款を改正することができます。 ④ 本約款は必要に応じて改正することができ、約款を改正しようとする場合、会社は改正された約款を適用日および改正理由を明示し、現行約款と共にその改正約款の適用日7日以前から適用日前日まで公示します。 ⑤ 前項にもかかわらず、会員に不利に約款を改正する場合には、その改正約款の適用日の30日以前から適用日の前日まで告知し、この場合、会社は改正前の内容と改正後の内容を明確に比較し、会員が分かりやすいように表示します。 ⑥ 改正約款は、次の各号に規定された方法のうち1つ以上の方法で会員に明確に通知するようにします。 1) サイト内掲示 2) 電子メール通知 3) 会社が定めたその他のお知らせ方法等 ⑦ 本約款の改正に関して異議のある会員は、サービスを脱退することができます。 ただし、異議があるにもかかわらず、本条第4項又は第5項の公示期間内に会員脱退及び拒否意思を表明しなかった会員は、改正約款に同意したものとみなします。 ⑧ 会社が約款を改正する場合は、その改正約款はその適用日以後に締結される契約にのみ適用され、それ以前に締結された契約に対しては改正前の約款がそのまま適用されます。 ただし、すでに契約を締結した会員が改正約款の適用を希望する旨を第4項または第5項による会社の公示期間内に会社に送信し、会社の同意を得た場合には改正約款が適用されます。 ⑨ 本約款で定めない事項と本約款の解釈に関しては、「電子商取引等における消費者保護に関する法律」、「約款の規制に関する法律」、公正取引委員会が告示する「電子商取引等における消費者保護指針」、「推薦·保証等に関する表示·広告審査指針」及び関連法令又は商慣習に従います。 第4条（サービスの提供及び変更） 会社は次のようなサービスを提供します。 ① 体験団サービス:会社からお知らせする必要がある情報や製品広告及び広報が必要な業者(以下「パートナー」)などの依頼を受け、様々な広告性イベント、特典などを応募形態の機能で提供します。 ② その他の会社が会員のために提供するサービス 会社は運営上、技術上の必要に応じて提供するサービスの全部または一部を変更することができ、これに対して約款に他の規定がない限り会員に別途の補償をすることはありません。 サービスを変更する場合は、変更理由および日付、変更内容を変更7日前のお知らせ掲示板にお知らせします。 ただし、変更理由または内容を具体的にお知らせすることが難しい場合は、その理由を明らかにします。 第5条（サービスの中断） ① 会社は、コンピュータ等情報通信設備の保守点検·交換及び故障、通信の途絶等の事由が発生した場合には、サービスの提供を一時的に中断することができます。 ② 会社は天災地変またはこれに準ずる不可抗力によりサービスを提供できない場合は、サービスの提供を制限または一時中断することができます。 ③ 第1項および第2項の場合、会社はその理由および期間などを事前または事後に会員にお知らせします。 ④ 会社は第1項及び第2項の場合以外にも、サービスの円滑な遂行のために必要な期間を定めて事前に告知し、サービスを中止することができます。 ⑤ 会社は、第1項の事由によりサービスの提供が一時的に中断されることにより、会員または第3者が被った損害を賠償します。 ただし、会社の故意または過失がない場合は、損害賠償はありません。 ⑥ 事業銘柄の転換、事業の放棄、企業間の統合ないし合併などにより会社がこれ以上サービスを提供できなくなる場合、会社は第8条に定める方法で会員に通知し、当初会社が提示した補償基準に従って会員に補償します。 第6条（会員登録） ① 会員は会社が定めた加入様式に従って必須会員情報を記入した後、本約款に同意するという意思表示をすることで会員登録を申請します。 ② 会社は次の各号のいずれかに該当する利用申請に対しては承認をしなかったり、承認を取り消すことができます。 1) 加入申請者が以前に会員資格を喪失したことがある場合。ただし、会員資格喪失後1年が経過した者として会社の会員再加入承諾を得た場合はこの限りでありません。 2) 他人の名義を盗用し、又は登録内容に虚偽、記載漏れ、誤記がある場合 3) 会員の責に帰すべき事由により承認できなかったり、その他規定した諸事項に違反して行われた申請 4) 会社はサービス関連設備の余裕がないか、技術上または業務上の問題がある場合。 この場合、会社は会員登録の承認を留保することができます。 5) 必須会員情報を記入しない場合 ③ 会員登録は、会社の承諾が会員に到達した時点で行われるものとします。 ④ 会員は会員登録時に登録した事項に変更がある場合、直接オンラインで個人情報を修正したり、直ちに電子メールまたはその他の方法で会社に変更事項を知らせなければなりません。 第7条（会員退会及び資格喪失） ① 会員は会社にいつでも脱退を要請することができ、会社はこのような要請を受けた場合、サイトを通じて会社が告知した方法に従って速やかに会員脱退を処理します。 ② 会員が本約款で定めた義務に違反した場合、会社はその違反程度に応じて会員アカウントに対して警告、一部または全体サービス利用の制限、契約解除をすることができます。 ③ 会員がサービスを脱退した場合、会員の個人情報に対する保管などは会社の個人情報処理方針に従います。 ④ 会員退会時、会員としてのすべての特典は消滅します。 会員退会に関連して発生した損害は、当該会員が責任を負わなければならず、会社は一切の責任を負いません。 ただし、その損害が会社の故意または過失による場合は、この限りではありません。 第8条（会員に対する通知） ① 会社は、会員登録時に認証した電子メールで会員に通知することができます。 ② 会社は不特定多数の会員に対する通知の場合、1週間以上サービス公示事項に掲示することで個別通知に代わることができます。 ただし、会員本人の取引に関して重大な影響を及ぼす事項については個別通知します。 第9条（情報の提供及び広告の掲載） ① 会社はサービス利用に必要と認められる様々な情報またはアンケートなどをEメール、SMS、お知らせなどの方法で会員に提供することができます。 ただし、会員は関連法令および行政規則に基づく取引関連情報および顧客問い合わせなどに対する回答などを除いては、いつでもこれに対して受信拒否をすることができます。 ② 会社は、サービスの利用に関してウェブサイト、電子メールなどに広告を掲載できます。 ただし、広告が掲載された電子メールなどを受信した会員は、その広告に対して受信拒否をすることができます。 ③ 会社はサービス運営に関して顧客が入力した会員情報および掲示物情報を活用してオーダーメード広告を掲載することができ、会員はサービス利用時に露出されるオーダーメード広告掲載に同意します。 この時、サービス上に掲載されている広告を通じた広告主の販促活動に会員が参加したり交信または取引をすることによって発生する損失と損害に対して会社は責任を負いません。 第10条（会員の義務） ① 会員は、サービス申請·利用過程で他人の情報を利用したり、虚偽の情報を提供してはなりません。 ② 会員は1人1アカウントの使用を原則とし、特定会員が多数の会員アカウントを故意に作成した後、活動することが摘発された場合、サービス利用が制限されることがあります。 ③ 会員は、第三者のIDを利用したり、自分のIDを第三者に利用させてはなりません。 ④ 会員は、会員の情報が変更された場合、直ちに会社に通知しなければならず、会員の変更情報を会社に知らせなかったことにより発生する不利益に対して会社は責任を負いません。 ⑤ 会員は、本約款その他の会社の内部規定·関係法令·行政規則を遵守しなければなりません。 ⑥ 会員は、本約款に規定する事項、サービスまたは各接続サービス別ホームページ上のお知らせ及び会社が定めた諸般のポリシーまたは規定を随時確認しなければなりません。 ⑦ 会員は次の各号の行為をしてはならず、次の各号の行為により会社又は第三者（パートナー等）に損害が発生した場合、会員は会社又は第三者（パートナー等）に対して損害賠償責任を負うことになります。 1) サービスを利用して購入した商品の代金又はその他のサービスの利用に関して会員が負担する債務を期日に支払わない行為 2) わいせつ又は暴力的なメッセージ画像音声その他公序良俗に反する情報をサービスに公開し、又は掲示する行為 3) 会社の許諾なしにサービスを利用して営業/広告活動などをしたり、会社が許諾した内容と範囲を外れた営業/広告活動行為 4) 他人のSNSアカウント、メールアドレス、携帯電話番号などを無断で利用または盗用する行為 5) 会社又は他人の名誉を傷つけ、又は確認されていない事実を流布する行為 6) 他人の知的財産権など権利を侵害する行為及び会社の業務遂行に著しい支障をきたす行為 7) 扇情的で淫乱な内容その他の公共秩序及び社会規範に反する内容を掲示する行為 8) 無償またはプロモーション価格で提供商品を受け取った後、レビューを作成する際、体験団申請時に連動したSNSアカウント以外のアカウントでレビューを作成する行為 9) 無償で提供された提供商品の販売·譲渡·賃貸等処分する行為 10) サービスを利用するにあたり、関係法令及び行政規則に違反する行為 ⑧ 会員はサービス利用中に発見されたバグやシステムエラーなどの問題点について会社に知らせなければならず、これを他の会員に広めたり悪用したりしてはいけません。 バグやシステムエラーなどの問題が発生した後も、これを会社に知らせずに利益を得ようとする目的で使用する場合、バグやシステム悪用とみなされ、当該会員のサービス利用に制限を受けることがあります。 第11条（会員ID及びパスワードに対する義務） ① IDおよびパスワードの管理責任は会員にあり、会員が希望する場合はセキュリティ上の理由などでいつでもパスワードの変更が可能ですが、会社が要請する場合は会員は本人認証をするか、会社が要求する本人確認書類を提出しなければなりません。。 ② 会員は、自分のID及びパスワードを第三者に利用させてはなりません。 会社は、会社の責に帰すべき事由なしに発生したIDおよびパスワードの共有または盗用による不利益に対して責任を負いません。 また、IDおよびパスワード共有中に第三者が会員本人のIDを利用して約款違反行為が発生したとしても、該当会員のサービス利用が制限されることがあります。 ③ 会員が自分のID及びパスワードを盗まれたり、第三者が使用していることを認知した場合は、すぐに会社に通知し、会社の案内がある場合はそれに従わなければなりません。 第12条（会社の義務） ① 会社は法令および行政規則と本約款が禁止したり公序良俗に反する行為をせず、本約款が定めるところにより持続的かつ安定的にサービスを運営することに最善を尽くさなければなりません。 ② 会社は、会員が安全にインターネットサービスを利用できるよう、会員の個人情報保護のためのセキュリティシステムを備えなければなりません。 第13条（個別サービスに対する約款及び利用条件） 会社は提供するサービスの具体的な内容によって、個別サービスに対する約款および利用条件を個別サービスごとに別途定め、会員の同意を得ることができます。 この場合、個別サービスに対する利用約款などが本約款に優先されます。 第14条（個人情報保護） ① 会社は、関係法令の定めるところにより、会員の個人情報を保護するために努力します。 ② 会社は、個人情報保護および使用については、関係法令および会社が別途告知し、会員の同意を得る個人情報処理方針が適用されます。 ③ 会社はサービス以外にサービスと単純なリンクで連結され、第三者が提供するサービスに対しては会社の個人情報処理方針が適用されず、会社は上記のような第三者が提供するサービスを利用することによって発生する会員の損害に対しては責任を負いません。 第15条（掲示板の著作権） ① 会員がサービス内に掲示した掲示物の著作権は、当該掲示物の著作者に帰属します。 ただし、23条2項に基づき、会社の体験団サービスを利用することで提供された提供商品に対して会員が著作物を作成することになった場合、それに対する著作権およびその他の知的財産権は会社に帰属します。 ② 会員がサービス内に掲示する掲示物は検索結果ないしサービスおよびサービス関連チャンネル(パウダールームウェブサイト、インスタグラム、ツイッター、ティックトック、ユーチューブなど)とプロモーションなどに露出することがあり、該当露出のために必要な範囲内では一部修正、複製、編集され掲示されることがあります。 この場合、会社は著作権法の規定を遵守し、会員はいつでもサービス内の問い合わせ機能を通じて該当掲示物に対して削除、非公開などの措置を取ることができます。 ③ 会員は会社のサービスを利用することで得た情報を会社の承諾なしに無断複製及び配布、伝送などのその他の方法を通じて営利目的で利用したり、第三者に利用してはなりません。 ④ 会社は第2項以外の方法で会員の掲示物を利用しようとする場合には、電子メール、コメント、メッセージなどを通じて事前に会員の同意を得なければなりません。 第16条（掲示板の管理） ① 会社は会員の掲示物を大切にし、変造、毀損、削除されないよう最善を尽くして保護します。 ② 会社はすべての利用者が会社で提供するサービスを安全に利用できるように、以下の場合、該当掲示物を削除またはブラインド処理したり、サービス提供中断、利用契約解約、再加入制限など適切な措置を取ることができます。 また、不法な行為と判断される場合、違反行為の軽重に応じて捜査機関への告発措置など適当な措置を取ることができます。 1) 他の会員または第三者にひどい侮辱を与えたり、名誉を傷つける内容 2) 特定の国籍、人種、宗教、民族、性別、障害などを一方的に嘲弄したり害を及ぼす内容の場合 3) 会員がわいせつ物を掲載したり、わいせつサイトにリンクした場合 4) 会社又は第三者の著作権等その他の知的財産権を含む一切の権利を侵害する内容である場合 5) 掲示板の性格に合わない掲示板の場合 6) 公共秩序及び美風良俗に違反する内容を流布し、又はリンクさせる場合 7) 営利を目的とする広告性の内容の場合 8) 犯罪と結びつくと客観的に認められる内容の場合 9) 会社で規定した掲示文の原則に反したり掲示板の性格に符合しない場合 10) 会社やサービスの正常な運営を妨げる場合 11) その他の関係法令及び行政規則に違反すると判断された場合 ③ 掲示文の内容が「情報通信網利用促進及び情報保護等に関する法律」、「個人情報保護法」、「著作権法」等に違反する場合、これにより権利が侵害された者は関連法令及び顧客センターで定めた手続きに従って当該掲示文の掲示中断及び削除等を要請することができ、会社は関連法令に従って必要な措置を取らなければなりません。 ④ 会社は前項の規定による要請がない場合でも、第三者の権利が侵害されたり侵害される可能性がある場合、またはその他の会社の政策·関連法令·行政規則に違反すると認められる事情がある場合には、当該掲示物の掲示中断及び削除など必要な措置を取ることができます。 ⑤ 会員はサービスを退会した後は、既に作成した掲示物の編集や削除ができませんので、退会前に当該掲示物に対する措置を取らなければなりません。 [第2章 体験団サービス] 第17条（第2章の適用範囲） 本章は体験団サービスについて適用します。 第18条（サービス利用原則） ① 会社はパートナーが提供する提供商品に関する情報を提供したり、パートナーが提供商品を会員に配送できるように連携するサービスを提供することにとどまり、これと関連してパートナーまたは会員の代理をしません。 ② 会社は会員に提供する提供商品が会員の個別的特性(身体的特性を含む)に適合したり、会員の個別的利用目的に符合するという点、提供商品の品質、完全性、安定性、適法性及び他人の権利に対する透け感、パートナーが入力またはリンクさせたURLに掲示された資料の真実性または適法性など一切の保証をいたしません。 ③ 会社が会員に提供する情報サービスなどのサービスのうち、財貨のパートナーが直接会社に提供した情報に関して会員が被る損害一切、会員が当該財貨を使用することによって被る損害一切に対する責任は、当該提供商品を提供したパートナーにあり、これに関して会社はいかなる責任も負いません。 第19条（体験団の申請） ① 会員は次またはこれに類する方法により体験団を申請し、会社は会員が体験団を申請するにあたって、次の各内容を分かりやすく提供しなければなりません。 1) 提供商品の選択 2) 氏名、住所、電話番号、電子メールアドレス、携帯番号、サイズなどの入力/選択欄 3) 約款内容、契約の申込みの撤回権が制限されるサービス、配送料·設置費などの費用負担に関する内容の確認 4) 本約款に同意し、第3号の事項を確認または拒否する表示(例、マウスクリック) 5) 提供商品の申請及びこれに関する確認又は会社の確認に対する同意 ② 会員は体験団利用またはミッション(レビュー作成)意思なしに体験団申請をしてはならず、これを通じて他の会員の体験団利用機会を妨害したことが摘発された場合、会社は該当アカウントに対して会員資格を停止するなどの制裁措置を取ることができます。 ③ 会員は体験団を申請する前に、必ずサイト内に作成した取引の条件を正確に確認した後、体験団を申請しなければなりません。 体験団の申請条件を確認せず、体験団の申請および利用によって発生したすべての損失、損害は会員本人にあります。 ④ 体験団の申請に関して、会員が入力した情報およびその情報に関して発生した責任と不利益は、完全に会員が負担します。 第20条（体験団選定基準） ビューティープロフィールを入力した会員は体験団に申し込むことができます。 SNSを日常的に使用するユーザーを対象としています。 SNSを日常的に使用することを判断するために、会社は以下のように最小限の選定基準を設け、体験団は該当基準を超える会員の中からサービス自体アルゴリズムによってランダムに選定されます。 選定基準は会社のポリシーによって変更される場合があります。 1) SNS(インスタグラム、ツイッター) 2) 体験団ターゲットに該当する場合(会員情報とビューティープロフィール作成のデータを基準に) 3) アカウント利用制限を受けていない場合(利用制限を受けてから解除された場合を含む) 4) SNS(インスタグラム、ツイッター)が虚偽アカウントでない場合 5) SNS(インスタグラム、ツイッター)が非公開アカウントでない場合 第21条（体験団当選者の義務及び参加者に対する制限措置） ① 体験団当選者の義務 体験団当選者は会社から提供された提供商品を会員登録及び体験団申請時に記入した自分のSNSに下記の義務事項を念頭に置いてレビューを作成しなければなりません。(留意:当選者の義務は当社のポリシーに基づいて変更されることがあり、変更される場合は別途お知らせします。) 1) レビューの締め切り日内にレビューの作成を完了します。 (通常配送日から10日以内) 2) レビューの作成時に、サービスが提供するハッシュタグをレビュー内に必ず挿入します。 3) 提供商品を最もよく表す写真または映像を5つ以上添付し、サイト内に告知されたレビュー提出URLとアンケート項目をすべて記入します。) 4) 作成したレビューおよびレビューSNS共有投稿をサービスで確認できるように、レビュー締め切り日内にリンクを提出します。 5) 作成したレビューSNS共有掲示物を削除せずに維持する必要があります。 6) レビュー作成時に公正取引委員会が告示する「推薦·保証等に関する表示·広告審査指針」で規定した経済的利害関係を公開するなどの事項を遵守しなければなりません。 ② 体験団当選者の義務違反事由 体験団当選者は会社で定める条件により提供商品を有·無償で支給することができます。 ただし、以下のような違反事由が発生した場合、会社は本条第3項に基づく制裁措置を取ることができます。 [違反事由] 1) 本条第1項「体験団の義務」に違反した場合 2) 体験団申請時に配送情報を誤って記載したり虚偽記載した場合 3) 体験団申請時、虚偽アカウントを使用した場合 4) 体験団レビューアーに選定された後、会社に知らせずに配送情報を変更する場合 5) レビュー作成期間内にレビューを作成しなかった場合 6) レビュー作成に含めるべきハッシュタグおよびコンテンツ（写真または映像）が間違っている場合 7) 会社に知らせずに任意でミッションレビューを作成するSNSアカウントを変更する場合 8) 本条第1項「体験団の義務」を果たさなかった場合 9) 以下の「誤ったレビュー」に該当するレビューを作成した場合 宅配またはボックスレビュー:提供商品を受け取ってすぐに宅配ボックスまたは包装ボックスを開けていない状態で撮った写真だけを載せたレビュー 誠意のないレビュー 1. 提供商品を使用せず、受け取るやいなやその場で作成した認証ショットのようなレビュー 2. 提供商品を床に投げておいたり、その他の提供商品の価値がよく現れないなど誠意のないレビュー 3. 写真がぼやけたり、焦点が合わなかったり、カットされた写真を投稿したレビュー 誤って投稿されたレビュー:レビューと関連のない写真を提出した場合 知的財産権違反レビュー 1.放送、音源、映画、漫画など他人の著作物を当事者の同意なしに共有する場合 2.他人の権利に属する商標権、意匠権等を無断で侵害する内容 違法性レビュー 1. 不法賭博サイトを広報する場合 2. 不法製品又はインターネットで販売禁止された物品を販売し、又は広報する場合 3. 犯罪行為に対する動機付け及び実行に役立つ情報を提供する場合 知的財産権違反レビュー 1. 提供商品の体験に関する内容なしに単純にハッシュタグのみを明示した場合 2. 提供商品の体験に関する内容は含まれているものの、必須ハッシュタグが正しく記載されていない場合 3. 提供商品と関係のない文を明示した場合 4. 提供商品の正当な評価ではなく、根拠のない悪評(卑俗語、誹謗語など)を残した場合 5. 関連のない特定の単語/フレーズを繰り返し挿入するなどの異常な場合 6. スパム文、広報文などの資料をレビューで掲載する場合 7. 他人の個人情報の露出/誘導、管理者詐称などその他のサービスを本サービス提供目的に反して使用するための目的でレビューを作成した場合 ③ 体験団レビュアーに対する制裁措置(警告、サービス利用永久制限及び損害賠償請求) 1) 警告 o レビュー遅延時(締切日経過時) o 製品と関係のないレビュー作成時 o その他本条第1，2項に違反した場合 2) サービス利用の永久制限及び損害賠償請求(会社に損害が発生した場合) o 同じ警告を 3 回以上受ける場合 o 特定の個人が多数の会員アカウントを故意に作成し、サービス及び個人情報を悪用した事例が摘発された場合 o 特定の個人が多数の会員アカウントを故意に作成し、サービス及び個人情報を悪用した事例が摘発された場合 第22条（提供商品の配送） ① 会社は体験団レビュアーに決められた日に提供商品を無償で配送し、体験団レビュアーは提供商品の配送遅延及び事故による未収取に対して会社に損害賠償請求をすることができません。 ② 会社はパートナーからの提供商品の配送が始まった場合、体験団のレビュー担当者にレビューの作成を要請することができます。 ③ 配送事故が発生した場合、会社はパートナーと協議して提供商品の供給手続きおよび進行状況を確認できるよう適切な措置をとります。 ④ 配送に関して配送業者と会員(体験団レビュアー)の間で紛争が発生した場合は、関連当事者間で解決しなければなりません。 会社はこれに対して関与せず、いかなる責任も負担しません。 ⑤ 会社は会員と別途の約定がない限り、体験団当選者発表日の翌営業日から7日以内に提供商品を配送します。 パートナー様の都合で配送が遅れる場合は、体験団レビュアーに電子メールなどの方法で事前にご案内します。 ➅海外配送の場合、パートナーは会社で提携した海外配送業者を通じて配送代行を要請することができます。 [第3章 その他の事項] 第23条（著作権の帰属及び利用制限） ① 会社が作成した著作物に対する著作権その他の知的財産権は会社に帰属します。 ② 会社の体験団サービスを利用することで提供された提供商品に対して会員が著作物を作成することになった場合、それに対する著作権およびその他の知的財産権は会社に帰属します。 ③ 会員は、サービスを利用することで得た情報のうち、会社に知的財産権が帰属する情報を会社の事前承諾なしに複製、送信、出版、配布、放送その他の方法により営利目的で利用したり、第三者に利用させてはなりません。 ④ 会社は約定により会員に帰属した著作権を使用する場合、当該会員に通知しなければなりません。 第24条（損害賠償） 会社、顧客及びパートナー(会社、顧客及びパートナーの被雇用人、代理人、その他請負及び委任等により当事者の一方に代わってこの約款に基づく権利義務を履行する者を含む)の故意、過失その他の責任ある事由により関連法令、この約款等に違反して相手方に損害が発生した場合、帰責当事者はこれにより相手方に発生した損害を賠償する責任があります。 第25条（紛争解決） ① 会社は会員が提起する正当な意見や不満を反映し、その被害を補償処理するために被害補償処理機構を設置·運営します。 ② 会社は、会員から提出される苦情や意見を迅速に処理するよう努めます。 ただし、迅速な処理が困難な場合は、会員にその理由と処理日程を直ちに通知します。 ③ 会社と会員の間で発生した電子商取引紛争と関連して会員の被害救済申請がある場合には公正取引委員会または市·道知事が依頼する紛争調停機関の調整に従うことができます。 ④ 会社はサービス内で会員間で発生する紛争および会員自らの過失による被害に対して関与したり、これに対して一切の責任を負いません。 ただし、サービス利用中に他の会員の本約款および関連法令などの違反行為による被害を受けた場合、会員はこれを会社に情報提供することができ、その場合、会社は申告内容を確認し、本約款などによる措置を取ることができます。 ⑤ 会員はオンラインでのお問い合わせを通じて、会社が提供するサービスに関する様々なお問い合わせを含め、要請及び提案を行うことができます。 [Eメール及びチャットに関するお問い合わせ] 相談利用時間:月~金曜日(11:00~17:00)、土/日/祝日休み 第26条（免責） ① 会社は関連法令及び行政規則に従って会社が責任を負担する場合を除き、通信販売仲介者としてサービスを基盤とした取引システムのみを提供するだけであり、実際の取引の進行には関与しません。 ② 戦時、事変、天災地変、国家非常事態、解決が困難な技術的欠陥、その他不可抗力的理由でサービスを提供できない場合は、会社の責任が免除されます。 ③ 会社は、会員の責に帰すべき事由によるサービスの中止/利用障害について責任を負いません。 ④ 基幹通信事業者が電気通信サービスを中止し、又は正常に提供せず会員に損害が発生した場合には、会社の責任が免除されます。 ⑤ 事前に告知されたサービス用設備の補修、交換、定期点検、工事などやむを得ない理由でサービスが中止されたり障害が発生した場合は会社の責任が免除されます。 ⑥ 会社は、関連法令に基づいて会社が責任を負う場合を除き、会員、パートナー、または第三者がこのサービス内またはウェブサイト上に掲示または送信した情報、資料、事実の信頼度、正確性などの内容については責任を負いません。 ⑦ 会社は会員相互間または会員と第三者間でサービスを媒介に発生した紛争に対して介入する義務がなく、これによる損害を賠償する責任も負いません。 第27条（裁判権及び準拠法） ① 会社と会員、パートナーと会員との間で提起された、本約款に基づく取引に関する訴訟には大韓民国法を準拠法とします。 ② 会社と「会員間で発生した紛争については、ソウル中央地方裁判所を第1審管轄裁判所とします。 本約款は2022年12月7日から施行されます。</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-footer" style="z-index: 9999999">
+                        <button type="button" onclick="$('#popup2').hide();"> 閉じる</button>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-dim-wrap" id="popup3" style="display: none; z-index: 999999">
+                <div class="popup-content-wrap">
+                    <div class="popup-header"> プライバシーポリシー
+                        <button type="button" onclick="$('#popup3').hide();"><img
+                                src="https://cf.powderroom.mobi/assets/theme/powderroom/images/icon-top-close-black.png"
+                                alt=""></button>
+                    </div>
+                    <div class="popup-content mypage-popup" style="background: white">
+                        <div class="form-box">
+                            <div class="form-item">
+                                <pre style="line-height: 150%; width: 100%; white-space: pre-wrap">株式会社PAWCOMPANY（以下「会社」といいます。）は、会社がホームページまたはモバイルアプリケーションを通じて提供するPowderroom JPサービス（以下「サービス」といいます。）を利用する利用者（以下「会員」といいます。）の個人情報を非常に重要なものと考え、以下のようなプライバシーポリシーを定めております。これにより、お客様からお預かりした個人情報について、どのような用途や方法で利用され、個人情報の保護のためにどのような措置がとられているかをお知らせいたします。本プライバシーポリシーは、個人情報の保護に関する法律、または指針の変更、会社の政策変化によって変更になることがありますので、会員の方々にはサービス利用時に随時ご確認をお願いいたします。 本プライバシーポリシーは、Powderroom JP サービスに適用されます。 第1条（個人情報の収集・利用の目的） [必須収集項目] ① 新規会員登録及びサービス利用過程において、会員から収集•利用する個人情報は下記の通りです。 サービス及びコミュニティへの登録 収集・利用の目的 : サービスの会員登録 収集・利用項目 : メールアドレス、ニックネーム 保存期間 : 退会後1ヶ月、及び関係法令によって定められた期間 体験団の応募また当選 収集・利用目的 : 体験団の応募確認、当選者の商品提供及び配送、運営 収集・利用項目 : メールアドレス、姓名、生年月日、電話番号、住所、SNSアカウント 保存期間 : イベント終了後１年間保管 お客様相談 収集・利用目的 : お問い合わせ対応及びお客様相談 収集・利用項目 : メールアドレス、相談内容 保存期間 : 関係法令によって定められた、お問い合わせの受付から3年間 自動的に生成される情報 収集・利用の目的 : サービス利用及び相談、不正利用の確認・防止、統計・分析 収集・利用項目 : クッキー、サービス利用記録(アクセス日時、IP、不良利用記録など)、機器情報(固有機器識別値、OSバージョン) 保存期間 : 関連法令に基づいた保存期間、及び退会後1ヶ月 [任意収集項目] 会員情報修正の際 収集・利用の目的 : ご利用者の識別、及びお客様相談、体験団商品発送、新旧サービスの開発、及びオーダーメイドサービスの提供、統計学的特性に基づくサービス提供、及び広告記載、サービスの有効性確認、イベントの参加機会、及び広告性情報の提供、接触頻度の把握、会員のサービス利用についての統計、会員のビューティープロフィール情報についてのメーリングサービス 収集・利用項目 : 生年月日、性別、肌タイプ、肌/ヘアのお悩み、関心カテゴリー、パーソナルカラー、目のタイプ 保存期間 : 脱退時即廃棄 広告通知 収集・利用の目的 : サービス関連の広告通知を送信 収集・利用項目 : メール、アプリのプッシュ 保存期間 : 関連法令に基づいた保存期間、または退会後3か月以内 ② 会社は利用規約の同意手続きを通じて同意の意思を表明した会員のサービス登録のために入力した情報を作成するのに利用し、会員は作成されたAccountで会社が提供するサービスを連携し、利用することができます。 第2条（個人情報の目的以外の利用及び第三者への提供） ① 会社はサービス会員の別途同意がある場合や法令の定める場合などを除き、会員の個人情報を第三者に提供することはありません。 ② 会社は、会員のサービス利用のために必要な場合、会員の同意を得る等適法な手続きを経て、以下のように個人情報を提供することが可能です。 ③ 個人情報の第三者への提供に関する同意を拒否される場合にも基本サービスを利用可能ですが、第三者への提供に規範したサービスの利用、及び提供に制限が生じることがあります。 ④ サービス利用の際第三者への提供に同意される場合、該当サービスの提供業者への下記の個人情報が提供されます。提供された者の詳細情報は利用者が購入、イベント申請及び、個人的にアクションを取った場合別途告知されます。 提供受付会社 : 体験団実行/広告エージェント 収集・利用目的 : 体験団商品発送、レビューコンテンツの提供、広告性情報の伝送 収集・利用項目 : メールアドレス、姓名、生年月日、電話番号、住所、SNSアカウントUR、肌タイプ、肌/ヘアのお悩み 保存期間 : サービス提供完了後１年間保管 第3条（情報主体の権利） ① 会員はサービスにログインし、「MY&gt;ログインアカウント管理、配送置管理、プロフィール修正」で個人情報を閲覧・訂正することができます。ただし、会員ID（メールアドレス）は、訂正できません。 ② 関連法令により求められる場合、その法令が与える要件と制限に応じて、会員は会社に個人情報関連の権利を行使することができます。例えば韓国では、会員は会社に個人情報の取り扱いの停止及び削除、個人情報の収集、利用に関する同意の撤回を要求することができます。 ③ 会員は入力した個人情報に間違いがある場合、訂正を求めることができますが、訂正前/後の個人情報が間違いに該当しない場合や、こうした手続きを悪用する場合は、会社は間違いの訂正が不可能な理由を遅滞なく通知します。 ④ 本条の権利は support@powderroom.io に連絡することで、行使できます。 第4条（個人情報の破棄） ① 会社は原則的に個人情報の利用目的が達成された後、または会員の退会(退会申込、強制退会を含む)時に、当該情報を閲覧または利用できないように遅滞なく破棄します。関係法令の遵守及び個人情報の収集目的を達成するために、下記に明示した一定期間保管した後、破棄します。 不正利用を防止するために、退会の申込から1カ月間、会員登録時に入力した情報を保存 関係法令に基づいて保存 ② 電子的ファイルの形で保存された個人情報は、記録を再生することのできない技術的方法を用いて削除し、記録物、印刷物など紙に印刷された個人情報は、シュレッダーで廃棄したり、焼却します。 ③ 会社は利用規約に基づき、会員登録後1年間サービスを利用していない休眠アカウントの個人情報を別途に分離保管します。分離保管された個人情報は、4年間保管した後、破棄します。会社は休眠アカウント会員に有効期限の少なくとも30日前までは通知する必要があり、通知の内容は下記のようです。 個人情報の破棄または分離保管、管理される事実 破棄日時 破棄される個人情報の項目 第5条（個人情報の自動収集装置の設置・運営及びその拒否に関する事項） 会社は会員に関する情報を保存し、随時読み込むクッキー(cookie)を使用します。クッキーは、ウェブサイトサーバーが利用者のコンピュータのブラウザ(Internet Explorer、Safari、Chrome、Firefox等)に転送する小さなテキストファイルです。クッキーは、会員のコンピュータは識別しますが、会員は個人的に識別しません。 (1) クッキーの運営 ① 個人の関心分野に応じて差別化された情報を提供 ② 会員と非会員のアクセス頻度または滞在時間等を分析し、会員の好みや関心分野を把握し、ターゲットマーケティングに活用 ③ 興味を持って閲覧した内容に関する跡を追跡し、次のアクセス時にカスタマイズされたサービスを提供 ④ お客様の習慣を分析し、サービス改善のバロメーターとして活用 (2) クッキーに関する選択権 会員のウェブブラウザを調整することにより、すべてのクッキーを受け入れるか、クッキーが保存されるたびに通知するか、すべてのクッキーをブロックするか、選択することができます。ただし、クッキーの保存を拒否した場合は、ログインが必要な一部のサービスは利用できません。 クッキーの受け入れレベルの設定方法(Internet Explorerの場合)は、以下の通りです。 ① [ツール]メニューの[インターネットオプション]を選択します。 ② [プライバシー]タブをクリックします。 ③ [詳細設定]ボタンをクリックし、「すべてのCookieを受け入れる/低/中/中-高/高/すべてのCookieをブロック」の6段階からレベルを設定します。 (3) クッキーは、ブラウザを終了するかログアウトすると無効になります。 第6条（個人情報保護のための技術的・管理的対策） (1) 会社は、会員の個人情報を取り扱う上で、個人情報の紛失、盗難、漏洩、改ざん、または毀損されないように安全性を確保するために合理的な措置をとることができ、そのための技術的対策としては、次のようなものがあります。 ① 会員の個人情報は、パスワードと暗号化された情報によって保護されています。しかし、会員のパスワードや個人情報は、公共の場でのインターネット使用等、様々な方法で他人に知られる可能性が高いため、保護を徹底することが最も重要です。したがって、会員も個人情報を他人に流出させたり、提供してはならず、本人の個人情報を責任を持って管理する必要があります。このような会員本人のミスや基本的なインターネットの危険性により発生する問題については、会社は責任を負いません。 ② 会員の個人情報は、基本的にパスワードと暗号化された情報によって保護され、ファイルや転送データを暗号化し、重要なデータは別途のセキュリティ機能を用いて保護されています。 ③ 会社はウイルス対策ソフトを利用して、コンピュータウイルスによる被害を防止するための措置をとっており、ウイルス対策ソフトは定期的に更新されます。 ④ 会社はハッキングやウイルス等によって会員の個人情報が流出したり、毀損されることを防ぐために、外部からの侵入検知や侵入遮断システムを設け 、24時間監視し、管理しています。 (2) 会社は、会員の個人情報保護の重要性を認識しており、そのために個人情報を取り扱う従業員を合理的に制限し、個人情報保護責任者が個人情報を取り扱う従業員を対象に教育を定期的に行い、個人情報保護のために最善を尽くしています。また、本ポリシーに明示されている移行事項及び関連従業員の遵守を定期的にチェックし、違反内容がある場合はそれを是正または改善し、その他の必要な措置をとるようにしています。 第7条（権益侵害の救済方法） 会社は、個人情報保護に関して会員が意見や不満を申し立てスムーズにコミュニケーションし、解決できるお客様相談窓口を設けています。 韓国の場合、会員と会社が個人情報保護に関する紛争が発生し個人情報侵害に関する相談が必要な場合は、韓国インターネット振興院の個人情報侵害申告センター、警察庁サイバー安全局等にお問い合わせすることができます。 個人情報侵害申告センター : http://privacy.kisa.or.kr (電話: +82-118) 個人情報紛争調整委員会 : http://www.kopico.go.kr (電話: +82-1833-6972) 大検察庁サイバー捜査課 : http://www.spo.go.kr (電話: +82-1303) 警察庁サイバー安全局 : http://cyber.go.kr (電話: +82-182) 第8条（権益侵害の救済方法） 会社は、個人情報保護責任者を指定し、担当部署から会員の重要な個人情報の保護業務に最善を尽くしています。また、下記の個人情報苦情処理担当部署では、個人情報の閲覧請求業務を担当しています。会員がサービスの個人情報に関するお問い合わせや意見、不満を申し立てたい場合は、下記の連絡先や電子メールまでご連絡ください。迅速かつ誠実に対応いたします。 個人情報保護責任者 姓名 : KIM JUNGEUN 電話 : +82-70-4827-4156 メールアドレス : product@powderroom.co.kr 第9条（個人情報の取扱委託管理） 会社はサービス利用及び契約の履行、会員の便宜を高めるために、必要に応じてプライバシーポリシーに公開した範囲内で、個人情報の取り扱いを韓国国内外の専門業者に委託したり、専門のプラットフォームを活用したりしています。 (1) 個人情報処理委託現況 委託した業務の再委託現況は委託を受け取る者の個人情報処理方針を通して確認可能です。 委託を受け取る者 : NHN Cloud(株) 委託した業務の内容 : ショートメッセージ、及びメールアドレス発送代行 (2) プラットフォーム活用現況 委託を受け取る者 : NHN Cloud(株) 委託した業務の内容:クラウドサーバー運営、及び管理 第10条（告知義務） 本プライバシーポリシーは、2022年12月7日制定され、政府及び会社のポリシー変更に伴い、内容の追加、削除、そして修正がある場合は、ホームページを通じて事前に告知し、会員に重大な影響を与える事項については最小７日前に告知します。 プライバシーポリシー バージョン番号: V2.0 プライバシーポリシー 施行日: 2023.06.30 以前の個人情報の取扱方針 2022.12.07 - 2023.06.29</pre>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="floating-footer" style="z-index: 9999999">
+                        <button type="button" onclick="$('#popup3').hide();"> 閉じる</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrap d-none z-index-10003" id="sns-modal">
+        <div class="dim"></div>
+        <div class="modal-inner">
+            <div class="content sns-load">
+                <div style="display: flex; justify-content: space-between; padding-bottom: 15px"><h5 style="padding: 0">
+                    SNS投稿を読み込む</h5>
+                    <button type="button" class="btn-header-right close" style="padding: 0"
+                            onclick="closeCustomModal('#sns-modal');"><img
+                            src="https://cf.powderroom.mobi/assets/theme/powderroom/images/icon-header-close.png"
+                            alt=""></button>
+                </div>
+                <button type="button" onclick="submitSns('instagram')"><img
+                        src="https://cf.powderroom.mobi/assets/theme/powderroom/images/icon-sns-insta.png"> Instagram
+                    投稿を読み込む
+                </button>
+                <button type="button" onclick="submitSns('twitter')"><img
+                        src="https://cf.powderroom.mobi/assets/theme/powderroom/images/icon-sns-x.png"> X(Twitter)
+                    投稿を読み込む
+                </button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrap d-none z-index-10002" id="change-modal">
+        <div class="dim"></div>
+        <div class="modal-inner">
+            <div class="content product-change"><p>作成中商品の変更を行う際、<br>今まで作成した内容が消えます</p>
+                <div class="btns">
+                    <button type="button" class="cancel" onclick="closeCustomModal('#change-modal');"> キャンセル
+                    </button>
+                    <button type="button" class="confirm"
+                            onclick="closeCustomModal('#change-modal');openCustomModal('#search-modal')"> それでも変更します
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="loginModal" class="modal-wrap d-none modal z-index-10002">
+        <div class="modal-content">
+            <iframe id="twitter-login-frame" src="about:blank"></iframe>
+        </div>
+    </div>
+    <div class="modal-wrap d-none z-index-10002" id="confirm-message-modal">
+        <div class="dim"></div>
+        <div class="modal-inner">
+            <div class="content product-change"><p id="confirm-message">*작성된 글은 임시 저장돼요</p>
+                <div class="btns">
+                    <button type="button" class="cancel" onclick="closeCustomModal('#confirm-message-modal');">
+                        キャンセル
+                    </button>
+                    <button type="button" class="confirm" id="confirm-message-button"> 確認</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="sns-result-modal" class="modal-wrap center-modal-wrap d-none">
+        <div class="dim"></div>
+        <div class="modal-inner">
+            <div class="content sns-load-fail"><img
+                    src="https://cf.powderroom.mobi/assets/theme/powderroom/images/img-fail.png"> <h5>あっ、投稿の読み込みに<br>失敗しました
+            </h5>
+                <p id="sns-result-message">요청을 처리하는 과정에서<br>문제가 발생했어요</p>
+                <button type="button" onclick="closeCustomModal('#sns-result-modal');"> 確認</button>
+            </div>
+        </div>
+    </div>
+    <div id="sns-post-result-modal" class="modal-wrap center-modal-wrap d-none">
+        <div class="dim"></div>
+        <div class="modal-inner">
+            <div class="content sns-load-fail"><img
+                    src="https://cf.powderroom.mobi/assets/theme/powderroom/images/img-fail.png"> <h5>
+                あっ、X(Twitter)の読み込みに<br>失敗しました</h5>
+                <p>要請を処理する過程で問題が発生しました</p>
+                <button type="button" onclick="closeCustomModal('#sns-post-result-modal');"> 確認</button>
+            </div>
+        </div>
+    </div>
+    <div id="logout-modal" class="modal-wrap logout d-none">
+        <div class="dim"></div>
+        <div class="modal-inner">
+            <div class="content product-change out">
+                <div class="img-txt-wrap"><h5>ログアウトしますか？</h5></div>
+                <div class="btns">
+                    <button type="button" class="cancel" onclick="closeCustomModal('#logout-modal')"> キャンセル
+                    </button>
+                    <button type="button" class="confirm" hx-get="/user/sign/out?return_url=%2F"
+                            hx-target="#limepie-contents" hx-push-url="true" xhx-indicator=".htmx-loading"
+                            hx-swap="innerHTML show:window:top"> 確認
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal-wrap d-none z-index-10003" id="template-modal">
+        <div class="dim"></div>
+        <div class="modal-inner">
+            <div class="content product-change template">
+                <div class="title-area"><h5>テンプレート</h5>
+                    <button type="button" onclick="templateUncheck(this)"><img
+                            src="https://cf.powderroom.mobi/assets/theme/powderroom/images/icon-popup-reset.png" alt="">
+                        全体初期化
+                    </button>
+                    <button type="button" onclick="closeCustomModal('#template-modal')" style="margin-left: 10px"><img
+                            src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMiAyMiIgd2lkdGg9IjIyIiBoZWlnaHQ9IjIyIj4KICA8cGF0aCBkPSJNNiA2TDE2IDE2TTYgMTZMMTYgNiIgc3Ryb2tlPSIjZGJkY2RmIiBzdHJva2Utd2lkdGg9IjIiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIvPgo8L3N2Zz4="
+                            alt="Close"> 閉じる
+                    </button>
+                </div>
+                <div class="template-area">
+                    <div class="select">
+                        <button type="button" class="on" id="template-group-button"
+                                onclick="choiceTemplate2(this, '#template-group-area')"> グループ系
+                        </button>
+                        <button type="button" class="off" id="template-option-button"
+                                onclick="choiceTemplate2(this, '#template-option-area')"> 細部 オプション
+                        </button>
+                    </div>
+                    <div class="overflow-area">
+                        <div class="group-item" id="template-group-area"><p>スキンケア系</p> <textarea class="content"
+                                                                                                       onclick="choiceTextrea('#textarea-type1')"
+                                                                                                       id="textarea-type1"
+                                                                                                       readonly="">♥ 商品特徴
+♥ 肌タイプ
+♥ 使用期間
+♥ 使用段階
+ʚ1ɞ
+ʚ2ɞ
+ʚ3ɞ
+•············•··············•
+♥ メリット
+♥ 残念なところ
+•············•··············•
+♥ 満足度
+♥ 効果
+♥ コツ
+</textarea>
+                            <p>メイクアップ系</p> <textarea class="content" onclick="choiceTextrea('#textarea-type2')"
+                                                            id="textarea-type2" readonly="">✮⋆˙ 商品特徴
+✮⋆˙ 肌タイプ
+━━━ ⋆ ━━━
+✩ 発色力
+✩ 持続力
+✩ テクスチャー
+✩ 満足度
+✩ 効果
+✩ リピーター購入
+✩ 仕上がり感
+━━━ ⋆ ━━━
+ ✮⋆˙ メリット
+ ✮⋆˙ 残念なところ
+</textarea></div>
+                        <div class="group-item options d-none" id="template-option-area"><p>情報</p>
+                            <div class="tags"><input type="checkbox" name="template_tags[]" value="商品特徴"
+                                                     id="group1_0"> <label for="group1_0">商品特徴</label> <input
+                                    type="checkbox" name="template_tags[]" value="使い方" id="group1_1"> <label
+                                    for="group1_1">使い方</label> <input type="checkbox" name="template_tags[]"
+                                                                         value="メリット" id="group1_2"> <label
+                                    for="group1_2">メリット</label> <input type="checkbox" name="template_tags[]"
+                                                                           value="残念なところ" id="group1_3"> <label
+                                    for="group1_3">残念なところ</label> <input type="checkbox" name="template_tags[]"
+                                                                               value="おすすめ対象" id="group1_4">
+                                <label for="group1_4">おすすめ対象</label> <input type="checkbox" name="template_tags[]"
+                                                                                  value="コツ" id="group1_5"> <label
+                                        for="group1_5">コツ</label> <input type="checkbox" name="template_tags[]"
+                                                                           value="肌タイプ" id="group1_6"> <label
+                                        for="group1_6">肌タイプ</label></div>
+                            <p>商品詳細</p>
+                            <div class="tags"><input type="checkbox" name="template_tags[]" value="発色力"
+                                                     id="group2_0"> <label for="group2_0">発色力</label> <input
+                                    type="checkbox" name="template_tags[]" value="持続力" id="group2_1"> <label
+                                    for="group2_1">持続力</label> <input type="checkbox" name="template_tags[]"
+                                                                         value="満足度" id="group2_2"> <label
+                                    for="group2_2">満足度</label> <input type="checkbox" name="template_tags[]"
+                                                                         value="効果" id="group2_3"> <label
+                                    for="group2_3">効果</label> <input type="checkbox" name="template_tags[]"
+                                                                       value="テクスチャー" id="group2_4"> <label
+                                    for="group2_4">テクスチャー</label> <input type="checkbox" name="template_tags[]"
+                                                                               value="リピーター購入" id="group2_5">
+                                <label for="group2_5">リピーター購入</label></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button type="button" class="confirm" onclick="sendTemplate();"> 適用する</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-dim-wrap d-none review-detail-popup review-valid-popup" id="profile-modal">
+        <div class="popup-content-wrap">
+            <button type="button" class="close-top" onclick="closeCustomModal('#profile-modal')"><img
+                    src="https://cf.powderroom.mobi/assets/theme/powderroom/images/icon-top-close.png" alt=""></button>
+            <div class="popup-content">
+                <div class="empty-wrap"><img
+                        src="https://cf.powderroom.mobi/assets/theme/powderroom/images/img-valid-review.png" alt="">
+                    <strong>プロフィールの作成をすれば、<br> 今すぐサービスをご利用いただけます</strong>
+                    <p>＊基本情報・皮膚情報 入力必須</p>
+                    <button type="button" hx-get="/user/profile/edit" hx-target="#limepie-contents" hx-push-url="true"
+                            hx-swap="innerHTML show:window:top" xhx-indicator=".htmx-loading"
+                            hx-on:htmx:after-request="closeCustomModal('#profile-modal')"> プロフィール作成しに行く
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-dim-wrap d-none review-detail-popup review-valid-popup" id="profile-all-modal">
+        <div class="popup-content-wrap">
+            <button type="button" class="close-top" onclick="closeCustomModal('#profile-all-modal')"><img
+                    src="https://cf.powderroom.mobi/assets/theme/powderroom/images/icon-top-close.png" alt=""></button>
+            <div class="popup-content">
+                <div class="empty-wrap"><img
+                        src="https://cf.powderroom.mobi/assets/theme/powderroom/images/img-valid-review.png" alt="">
+                    <strong>プロフィールの作成をすれば、<br> 今すぐサービスをご利用いただけます</strong>
+                    <button type="button" hx-get="/user/profile/edit" hx-target="#limepie-contents" hx-push-url="true"
+                            hx-swap="innerHTML show:window:top" xhx-indicator=".htmx-loading"
+                            hx-on:htmx:after-request="closeCustomModal('#profile-all-modal')"> プロフィール作成しに行く
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="popup-dim-wrap" id="popup-terms"
+         style="display: none; z-index: 999999; padding-bottom: calc(env(safe-area-inset-bottom))">
+        <div class="popup-content-wrap">
+            <div class="popup-header"> サービスの利用規約
+                <button type="button" onclick="closeCustomModal('#popup-terms');"><img
+                        src=" /assets/theme/powderroom/images/icon-top-close-black.png" alt=""></button>
+            </div>
+            <div class="popup-content mypage-popup" style="background: white">
+                <div class="form-box">
+                    <div class="form-item">
+                        <pre style="line-height: 150%; width: 100%; white-space: pre-wrap">[第1章 総則] 第1条（目的） 本約款は株式会社PAWCOMPANY(以下「会社」)が運営するPowderroom JPサービス(以下「サービス」)を利用するにあたり、利用者の権利·義務及び責任事項、サービス利用条件及び手続きなど基本的な事項を規定することを目的としています。 第2条（用語の定義） この約款で使用する用語の定義は次のとおりです。 ① 会員:サービスに会員登録をした者で、本約款に同意して会社が提供するサービスを継続的に利用できる者をいいます。 ② ID:会員の識別及びサービス利用のため、会員登録時に認証を受けた本人のメールアドレスを意味します。 ③ ニックネーム:会員がID(メールアドレス)の他に別途指定した固有の名称です。 ④ 体験団:提供商品のレビュアーを募集するなど、製品の広報やマーケティングのための一連のプロモーション活動を指します。 ⑤ レビュアー:体験団に申し込んだ後、当選して提供商品(以下で定義される)を提供され、その条件で提供商品に対するレビューを作成、共有する会員のことです。 ⑥ レビュー:体験団提供商品をテーマに創作された作品のことです。 体験団提供商品を活用して会員が掲示または登録する符号、文字、音声、音響、映像、イメージなどの形態の文および各種ファイルとリンクなどを意味します。 ⑦ 提供商品:体験団に関して、会員が会社が定めた規定により当選した後、レビュー作成を目的として、無償で提供される現物商品、サンプルなどを意味します。 ⑧ パートナー:会員に提供商品を提供したり、広告性情報を依頼する広告主業者および商品を提供するブランドおよび業者を意味します。 第3条（約款の効力及び改正） ① 本約款はサービス初期画面およびMYページに掲示して会員に通知し、会員がサービス会員登録時にこれに同意することで効力が発生します。 ただし、約款の具体的な内容は、会員が接続画面を通じて見ることができます。 ② 会社は、会員が本約款に同意する前に、本約款に定められている内容のうち、契約の申込みの撤回、配送責任、払い戻し条件などの重要な内容を会員が理解できるよう、別途の接続画面またはポップアップ画面などを提供し、会員の確認を求めています。 ③ 会社は「電子商取引等における消費者保護に関する法律」、「約款の規制に関する法律」、「電子文書及び電子取引基本法」、「電子署名法」、「情報通信網利用促進及び情報保護等に関する法律」等、関連法令及び行政規則に違反しない範囲で本約款を改正することができます。 ④ 本約款は必要に応じて改正することができ、約款を改正しようとする場合、会社は改正された約款を適用日および改正理由を明示し、現行約款と共にその改正約款の適用日7日以前から適用日前日まで公示します。 ⑤ 前項にもかかわらず、会員に不利に約款を改正する場合には、その改正約款の適用日の30日以前から適用日の前日まで告知し、この場合、会社は改正前の内容と改正後の内容を明確に比較し、会員が分かりやすいように表示します。 ⑥ 改正約款は、次の各号に規定された方法のうち1つ以上の方法で会員に明確に通知するようにします。 1) サイト内掲示 2) 電子メール通知 3) 会社が定めたその他のお知らせ方法等 ⑦ 本約款の改正に関して異議のある会員は、サービスを脱退することができます。 ただし、異議があるにもかかわらず、本条第4項又は第5項の公示期間内に会員脱退及び拒否意思を表明しなかった会員は、改正約款に同意したものとみなします。 ⑧ 会社が約款を改正する場合は、その改正約款はその適用日以後に締結される契約にのみ適用され、それ以前に締結された契約に対しては改正前の約款がそのまま適用されます。 ただし、すでに契約を締結した会員が改正約款の適用を希望する旨を第4項または第5項による会社の公示期間内に会社に送信し、会社の同意を得た場合には改正約款が適用されます。 ⑨ 本約款で定めない事項と本約款の解釈に関しては、「電子商取引等における消費者保護に関する法律」、「約款の規制に関する法律」、公正取引委員会が告示する「電子商取引等における消費者保護指針」、「推薦·保証等に関する表示·広告審査指針」及び関連法令又は商慣習に従います。 第4条（サービスの提供及び変更） 会社は次のようなサービスを提供します。 ① 体験団サービス:会社からお知らせする必要がある情報や製品広告及び広報が必要な業者(以下「パートナー」)などの依頼を受け、様々な広告性イベント、特典などを応募形態の機能で提供します。 ② その他の会社が会員のために提供するサービス 会社は運営上、技術上の必要に応じて提供するサービスの全部または一部を変更することができ、これに対して約款に他の規定がない限り会員に別途の補償をすることはありません。 サービスを変更する場合は、変更理由および日付、変更内容を変更7日前のお知らせ掲示板にお知らせします。 ただし、変更理由または内容を具体的にお知らせすることが難しい場合は、その理由を明らかにします。 第5条（サービスの中断） ① 会社は、コンピュータ等情報通信設備の保守点検·交換及び故障、通信の途絶等の事由が発生した場合には、サービスの提供を一時的に中断することができます。 ② 会社は天災地変またはこれに準ずる不可抗力によりサービスを提供できない場合は、サービスの提供を制限または一時中断することができます。 ③ 第1項および第2項の場合、会社はその理由および期間などを事前または事後に会員にお知らせします。 ④ 会社は第1項及び第2項の場合以外にも、サービスの円滑な遂行のために必要な期間を定めて事前に告知し、サービスを中止することができます。 ⑤ 会社は、第1項の事由によりサービスの提供が一時的に中断されることにより、会員または第3者が被った損害を賠償します。 ただし、会社の故意または過失がない場合は、損害賠償はありません。 ⑥ 事業銘柄の転換、事業の放棄、企業間の統合ないし合併などにより会社がこれ以上サービスを提供できなくなる場合、会社は第8条に定める方法で会員に通知し、当初会社が提示した補償基準に従って会員に補償します。 第6条（会員登録） ① 会員は会社が定めた加入様式に従って必須会員情報を記入した後、本約款に同意するという意思表示をすることで会員登録を申請します。 ② 会社は次の各号のいずれかに該当する利用申請に対しては承認をしなかったり、承認を取り消すことができます。 1) 加入申請者が以前に会員資格を喪失したことがある場合。ただし、会員資格喪失後1年が経過した者として会社の会員再加入承諾を得た場合はこの限りでありません。 2) 他人の名義を盗用し、又は登録内容に虚偽、記載漏れ、誤記がある場合 3) 会員の責に帰すべき事由により承認できなかったり、その他規定した諸事項に違反して行われた申請 4) 会社はサービス関連設備の余裕がないか、技術上または業務上の問題がある場合。 この場合、会社は会員登録の承認を留保することができます。 5) 必須会員情報を記入しない場合 ③ 会員登録は、会社の承諾が会員に到達した時点で行われるものとします。 ④ 会員は会員登録時に登録した事項に変更がある場合、直接オンラインで個人情報を修正したり、直ちに電子メールまたはその他の方法で会社に変更事項を知らせなければなりません。 第7条（会員退会及び資格喪失） ① 会員は会社にいつでも脱退を要請することができ、会社はこのような要請を受けた場合、サイトを通じて会社が告知した方法に従って速やかに会員脱退を処理します。 ② 会員が本約款で定めた義務に違反した場合、会社はその違反程度に応じて会員アカウントに対して警告、一部または全体サービス利用の制限、契約解除をすることができます。 ③ 会員がサービスを脱退した場合、会員の個人情報に対する保管などは会社の個人情報処理方針に従います。 ④ 会員退会時、会員としてのすべての特典は消滅します。 会員退会に関連して発生した損害は、当該会員が責任を負わなければならず、会社は一切の責任を負いません。 ただし、その損害が会社の故意または過失による場合は、この限りではありません。 第8条（会員に対する通知） ① 会社は、会員登録時に認証した電子メールで会員に通知することができます。 ② 会社は不特定多数の会員に対する通知の場合、1週間以上サービス公示事項に掲示することで個別通知に代わることができます。 ただし、会員本人の取引に関して重大な影響を及ぼす事項については個別通知します。 第9条（情報の提供及び広告の掲載） ① 会社はサービス利用に必要と認められる様々な情報またはアンケートなどをEメール、SMS、お知らせなどの方法で会員に提供することができます。 ただし、会員は関連法令および行政規則に基づく取引関連情報および顧客問い合わせなどに対する回答などを除いては、いつでもこれに対して受信拒否をすることができます。 ② 会社は、サービスの利用に関してウェブサイト、電子メールなどに広告を掲載できます。 ただし、広告が掲載された電子メールなどを受信した会員は、その広告に対して受信拒否をすることができます。 ③ 会社はサービス運営に関して顧客が入力した会員情報および掲示物情報を活用してオーダーメード広告を掲載することができ、会員はサービス利用時に露出されるオーダーメード広告掲載に同意します。 この時、サービス上に掲載されている広告を通じた広告主の販促活動に会員が参加したり交信または取引をすることによって発生する損失と損害に対して会社は責任を負いません。 第10条（会員の義務） ① 会員は、サービス申請·利用過程で他人の情報を利用したり、虚偽の情報を提供してはなりません。 ② 会員は1人1アカウントの使用を原則とし、特定会員が多数の会員アカウントを故意に作成した後、活動することが摘発された場合、サービス利用が制限されることがあります。 ③ 会員は、第三者のIDを利用したり、自分のIDを第三者に利用させてはなりません。 ④ 会員は、会員の情報が変更された場合、直ちに会社に通知しなければならず、会員の変更情報を会社に知らせなかったことにより発生する不利益に対して会社は責任を負いません。 ⑤ 会員は、本約款その他の会社の内部規定·関係法令·行政規則を遵守しなければなりません。 ⑥ 会員は、本約款に規定する事項、サービスまたは各接続サービス別ホームページ上のお知らせ及び会社が定めた諸般のポリシーまたは規定を随時確認しなければなりません。 ⑦ 会員は次の各号の行為をしてはならず、次の各号の行為により会社又は第三者（パートナー等）に損害が発生した場合、会員は会社又は第三者（パートナー等）に対して損害賠償責任を負うことになります。 1) サービスを利用して購入した商品の代金又はその他のサービスの利用に関して会員が負担する債務を期日に支払わない行為 2) わいせつ又は暴力的なメッセージ画像音声その他公序良俗に反する情報をサービスに公開し、又は掲示する行為 3) 会社の許諾なしにサービスを利用して営業/広告活動などをしたり、会社が許諾した内容と範囲を外れた営業/広告活動行為 4) 他人のSNSアカウント、メールアドレス、携帯電話番号などを無断で利用または盗用する行為 5) 会社又は他人の名誉を傷つけ、又は確認されていない事実を流布する行為 6) 他人の知的財産権など権利を侵害する行為及び会社の業務遂行に著しい支障をきたす行為 7) 扇情的で淫乱な内容その他の公共秩序及び社会規範に反する内容を掲示する行為 8) 無償またはプロモーション価格で提供商品を受け取った後、レビューを作成する際、体験団申請時に連動したSNSアカウント以外のアカウントでレビューを作成する行為 9) 無償で提供された提供商品の販売·譲渡·賃貸等処分する行為 10) サービスを利用するにあたり、関係法令及び行政規則に違反する行為 ⑧ 会員はサービス利用中に発見されたバグやシステムエラーなどの問題点について会社に知らせなければならず、これを他の会員に広めたり悪用したりしてはいけません。 バグやシステムエラーなどの問題が発生した後も、これを会社に知らせずに利益を得ようとする目的で使用する場合、バグやシステム悪用とみなされ、当該会員のサービス利用に制限を受けることがあります。 第11条（会員ID及びパスワードに対する義務） ① IDおよびパスワードの管理責任は会員にあり、会員が希望する場合はセキュリティ上の理由などでいつでもパスワードの変更が可能ですが、会社が要請する場合は会員は本人認証をするか、会社が要求する本人確認書類を提出しなければなりません。。 ② 会員は、自分のID及びパスワードを第三者に利用させてはなりません。 会社は、会社の責に帰すべき事由なしに発生したIDおよびパスワードの共有または盗用による不利益に対して責任を負いません。 また、IDおよびパスワード共有中に第三者が会員本人のIDを利用して約款違反行為が発生したとしても、該当会員のサービス利用が制限されることがあります。 ③ 会員が自分のID及びパスワードを盗まれたり、第三者が使用していることを認知した場合は、すぐに会社に通知し、会社の案内がある場合はそれに従わなければなりません。 第12条（会社の義務） ① 会社は法令および行政規則と本約款が禁止したり公序良俗に反する行為をせず、本約款が定めるところにより持続的かつ安定的にサービスを運営することに最善を尽くさなければなりません。 ② 会社は、会員が安全にインターネットサービスを利用できるよう、会員の個人情報保護のためのセキュリティシステムを備えなければなりません。 第13条（個別サービスに対する約款及び利用条件） 会社は提供するサービスの具体的な内容によって、個別サービスに対する約款および利用条件を個別サービスごとに別途定め、会員の同意を得ることができます。 この場合、個別サービスに対する利用約款などが本約款に優先されます。 第14条（個人情報保護） ① 会社は、関係法令の定めるところにより、会員の個人情報を保護するために努力します。 ② 会社は、個人情報保護および使用については、関係法令および会社が別途告知し、会員の同意を得る個人情報処理方針が適用されます。 ③ 会社はサービス以外にサービスと単純なリンクで連結され、第三者が提供するサービスに対しては会社の個人情報処理方針が適用されず、会社は上記のような第三者が提供するサービスを利用することによって発生する会員の損害に対しては責任を負いません。 第15条（掲示板の著作権） ① 会員がサービス内に掲示した掲示物の著作権は、当該掲示物の著作者に帰属します。 ただし、23条2項に基づき、会社の体験団サービスを利用することで提供された提供商品に対して会員が著作物を作成することになった場合、それに対する著作権およびその他の知的財産権は会社に帰属します。 ② 会員がサービス内に掲示する掲示物は検索結果ないしサービスおよびサービス関連チャンネル(パウダールームウェブサイト、インスタグラム、ツイッター、ティックトック、ユーチューブなど)とプロモーションなどに露出することがあり、該当露出のために必要な範囲内では一部修正、複製、編集され掲示されることがあります。 この場合、会社は著作権法の規定を遵守し、会員はいつでもサービス内の問い合わせ機能を通じて該当掲示物に対して削除、非公開などの措置を取ることができます。 ③ 会員は会社のサービスを利用することで得た情報を会社の承諾なしに無断複製及び配布、伝送などのその他の方法を通じて営利目的で利用したり、第三者に利用してはなりません。 ④ 会社は第2項以外の方法で会員の掲示物を利用しようとする場合には、電子メール、コメント、メッセージなどを通じて事前に会員の同意を得なければなりません。 第16条（掲示板の管理） ① 会社は会員の掲示物を大切にし、変造、毀損、削除されないよう最善を尽くして保護します。 ② 会社はすべての利用者が会社で提供するサービスを安全に利用できるように、以下の場合、該当掲示物を削除またはブラインド処理したり、サービス提供中断、利用契約解約、再加入制限など適切な措置を取ることができます。 また、不法な行為と判断される場合、違反行為の軽重に応じて捜査機関への告発措置など適当な措置を取ることができます。 1) 他の会員または第三者にひどい侮辱を与えたり、名誉を傷つける内容 2) 特定の国籍、人種、宗教、民族、性別、障害などを一方的に嘲弄したり害を及ぼす内容の場合 3) 会員がわいせつ物を掲載したり、わいせつサイトにリンクした場合 4) 会社又は第三者の著作権等その他の知的財産権を含む一切の権利を侵害する内容である場合 5) 掲示板の性格に合わない掲示板の場合 6) 公共秩序及び美風良俗に違反する内容を流布し、又はリンクさせる場合 7) 営利を目的とする広告性の内容の場合 8) 犯罪と結びつくと客観的に認められる内容の場合 9) 会社で規定した掲示文の原則に反したり掲示板の性格に符合しない場合 10) 会社やサービスの正常な運営を妨げる場合 11) その他の関係法令及び行政規則に違反すると判断された場合 ③ 掲示文の内容が「情報通信網利用促進及び情報保護等に関する法律」、「個人情報保護法」、「著作権法」等に違反する場合、これにより権利が侵害された者は関連法令及び顧客センターで定めた手続きに従って当該掲示文の掲示中断及び削除等を要請することができ、会社は関連法令に従って必要な措置を取らなければなりません。 ④ 会社は前項の規定による要請がない場合でも、第三者の権利が侵害されたり侵害される可能性がある場合、またはその他の会社の政策·関連法令·行政規則に違反すると認められる事情がある場合には、当該掲示物の掲示中断及び削除など必要な措置を取ることができます。 ⑤ 会員はサービスを退会した後は、既に作成した掲示物の編集や削除ができませんので、退会前に当該掲示物に対する措置を取らなければなりません。 [第2章 体験団サービス] 第17条（第2章の適用範囲） 本章は体験団サービスについて適用します。 第18条（サービス利用原則） ① 会社はパートナーが提供する提供商品に関する情報を提供したり、パートナーが提供商品を会員に配送できるように連携するサービスを提供することにとどまり、これと関連してパートナーまたは会員の代理をしません。 ② 会社は会員に提供する提供商品が会員の個別的特性(身体的特性を含む)に適合したり、会員の個別的利用目的に符合するという点、提供商品の品質、完全性、安定性、適法性及び他人の権利に対する透け感、パートナーが入力またはリンクさせたURLに掲示された資料の真実性または適法性など一切の保証をいたしません。 ③ 会社が会員に提供する情報サービスなどのサービスのうち、財貨のパートナーが直接会社に提供した情報に関して会員が被る損害一切、会員が当該財貨を使用することによって被る損害一切に対する責任は、当該提供商品を提供したパートナーにあり、これに関して会社はいかなる責任も負いません。 第19条（体験団の申請） ① 会員は次またはこれに類する方法により体験団を申請し、会社は会員が体験団を申請するにあたって、次の各内容を分かりやすく提供しなければなりません。 1) 提供商品の選択 2) 氏名、住所、電話番号、電子メールアドレス、携帯番号、サイズなどの入力/選択欄 3) 約款内容、契約の申込みの撤回権が制限されるサービス、配送料·設置費などの費用負担に関する内容の確認 4) 本約款に同意し、第3号の事項を確認または拒否する表示(例、マウスクリック) 5) 提供商品の申請及びこれに関する確認又は会社の確認に対する同意 ② 会員は体験団利用またはミッション(レビュー作成)意思なしに体験団申請をしてはならず、これを通じて他の会員の体験団利用機会を妨害したことが摘発された場合、会社は該当アカウントに対して会員資格を停止するなどの制裁措置を取ることができます。 ③ 会員は体験団を申請する前に、必ずサイト内に作成した取引の条件を正確に確認した後、体験団を申請しなければなりません。 体験団の申請条件を確認せず、体験団の申請および利用によって発生したすべての損失、損害は会員本人にあります。 ④ 体験団の申請に関して、会員が入力した情報およびその情報に関して発生した責任と不利益は、完全に会員が負担します。 第20条（体験団選定基準） ビューティープロフィールを入力した会員は体験団に申し込むことができます。 SNSを日常的に使用するユーザーを対象としています。 SNSを日常的に使用することを判断するために、会社は以下のように最小限の選定基準を設け、体験団は該当基準を超える会員の中からサービス自体アルゴリズムによってランダムに選定されます。 選定基準は会社のポリシーによって変更される場合があります。 1) SNS(インスタグラム、ツイッター) 2) 体験団ターゲットに該当する場合(会員情報とビューティープロフィール作成のデータを基準に) 3) アカウント利用制限を受けていない場合(利用制限を受けてから解除された場合を含む) 4) SNS(インスタグラム、ツイッター)が虚偽アカウントでない場合 5) SNS(インスタグラム、ツイッター)が非公開アカウントでない場合 第21条（体験団当選者の義務及び参加者に対する制限措置） ① 体験団当選者の義務 体験団当選者は会社から提供された提供商品を会員登録及び体験団申請時に記入した自分のSNSに下記の義務事項を念頭に置いてレビューを作成しなければなりません。(留意:当選者の義務は当社のポリシーに基づいて変更されることがあり、変更される場合は別途お知らせします。) 1) レビューの締め切り日内にレビューの作成を完了します。 (通常配送日から10日以内) 2) レビューの作成時に、サービスが提供するハッシュタグをレビュー内に必ず挿入します。 3) 提供商品を最もよく表す写真または映像を5つ以上添付し、サイト内に告知されたレビュー提出URLとアンケート項目をすべて記入します。) 4) 作成したレビューおよびレビューSNS共有投稿をサービスで確認できるように、レビュー締め切り日内にリンクを提出します。 5) 作成したレビューSNS共有掲示物を削除せずに維持する必要があります。 6) レビュー作成時に公正取引委員会が告示する「推薦·保証等に関する表示·広告審査指針」で規定した経済的利害関係を公開するなどの事項を遵守しなければなりません。 ② 体験団当選者の義務違反事由 体験団当選者は会社で定める条件により提供商品を有·無償で支給することができます。 ただし、以下のような違反事由が発生した場合、会社は本条第3項に基づく制裁措置を取ることができます。 [違反事由] 1) 本条第1項「体験団の義務」に違反した場合 2) 体験団申請時に配送情報を誤って記載したり虚偽記載した場合 3) 体験団申請時、虚偽アカウントを使用した場合 4) 体験団レビューアーに選定された後、会社に知らせずに配送情報を変更する場合 5) レビュー作成期間内にレビューを作成しなかった場合 6) レビュー作成に含めるべきハッシュタグおよびコンテンツ（写真または映像）が間違っている場合 7) 会社に知らせずに任意でミッションレビューを作成するSNSアカウントを変更する場合 8) 本条第1項「体験団の義務」を果たさなかった場合 9) 以下の「誤ったレビュー」に該当するレビューを作成した場合 宅配またはボックスレビュー:提供商品を受け取ってすぐに宅配ボックスまたは包装ボックスを開けていない状態で撮った写真だけを載せたレビュー 誠意のないレビュー 1. 提供商品を使用せず、受け取るやいなやその場で作成した認証ショットのようなレビュー 2. 提供商品を床に投げておいたり、その他の提供商品の価値がよく現れないなど誠意のないレビュー 3. 写真がぼやけたり、焦点が合わなかったり、カットされた写真を投稿したレビュー 誤って投稿されたレビュー:レビューと関連のない写真を提出した場合 知的財産権違反レビュー 1.放送、音源、映画、漫画など他人の著作物を当事者の同意なしに共有する場合 2.他人の権利に属する商標権、意匠権等を無断で侵害する内容 違法性レビュー 1. 不法賭博サイトを広報する場合 2. 不法製品又はインターネットで販売禁止された物品を販売し、又は広報する場合 3. 犯罪行為に対する動機付け及び実行に役立つ情報を提供する場合 知的財産権違反レビュー 1. 提供商品の体験に関する内容なしに単純にハッシュタグのみを明示した場合 2. 提供商品の体験に関する内容は含まれているものの、必須ハッシュタグが正しく記載されていない場合 3. 提供商品と関係のない文を明示した場合 4. 提供商品の正当な評価ではなく、根拠のない悪評(卑俗語、誹謗語など)を残した場合 5. 関連のない特定の単語/フレーズを繰り返し挿入するなどの異常な場合 6. スパム文、広報文などの資料をレビューで掲載する場合 7. 他人の個人情報の露出/誘導、管理者詐称などその他のサービスを本サービス提供目的に反して使用するための目的でレビューを作成した場合 ③ 体験団レビュアーに対する制裁措置(警告、サービス利用永久制限及び損害賠償請求) 1) 警告 o レビュー遅延時(締切日経過時) o 製品と関係のないレビュー作成時 o その他本条第1，2項に違反した場合 2) サービス利用の永久制限及び損害賠償請求(会社に損害が発生した場合) o 同じ警告を 3 回以上受ける場合 o 特定の個人が多数の会員アカウントを故意に作成し、サービス及び個人情報を悪用した事例が摘発された場合 o 特定の個人が多数の会員アカウントを故意に作成し、サービス及び個人情報を悪用した事例が摘発された場合 第22条（提供商品の配送） ① 会社は体験団レビュアーに決められた日に提供商品を無償で配送し、体験団レビュアーは提供商品の配送遅延及び事故による未収取に対して会社に損害賠償請求をすることができません。 ② 会社はパートナーからの提供商品の配送が始まった場合、体験団のレビュー担当者にレビューの作成を要請することができます。 ③ 配送事故が発生した場合、会社はパートナーと協議して提供商品の供給手続きおよび進行状況を確認できるよう適切な措置をとります。 ④ 配送に関して配送業者と会員(体験団レビュアー)の間で紛争が発生した場合は、関連当事者間で解決しなければなりません。 会社はこれに対して関与せず、いかなる責任も負担しません。 ⑤ 会社は会員と別途の約定がない限り、体験団当選者発表日の翌営業日から7日以内に提供商品を配送します。 パートナー様の都合で配送が遅れる場合は、体験団レビュアーに電子メールなどの方法で事前にご案内します。 ➅海外配送の場合、パートナーは会社で提携した海外配送業者を通じて配送代行を要請することができます。 [第3章 その他の事項] 第23条（著作権の帰属及び利用制限） ① 会社が作成した著作物に対する著作権その他の知的財産権は会社に帰属します。 ② 会社の体験団サービスを利用することで提供された提供商品に対して会員が著作物を作成することになった場合、それに対する著作権およびその他の知的財産権は会社に帰属します。 ③ 会員は、サービスを利用することで得た情報のうち、会社に知的財産権が帰属する情報を会社の事前承諾なしに複製、送信、出版、配布、放送その他の方法により営利目的で利用したり、第三者に利用させてはなりません。 ④ 会社は約定により会員に帰属した著作権を使用する場合、当該会員に通知しなければなりません。 第24条（損害賠償） 会社、顧客及びパートナー(会社、顧客及びパートナーの被雇用人、代理人、その他請負及び委任等により当事者の一方に代わってこの約款に基づく権利義務を履行する者を含む)の故意、過失その他の責任ある事由により関連法令、この約款等に違反して相手方に損害が発生した場合、帰責当事者はこれにより相手方に発生した損害を賠償する責任があります。 第25条（紛争解決） ① 会社は会員が提起する正当な意見や不満を反映し、その被害を補償処理するために被害補償処理機構を設置·運営します。 ② 会社は、会員から提出される苦情や意見を迅速に処理するよう努めます。 ただし、迅速な処理が困難な場合は、会員にその理由と処理日程を直ちに通知します。 ③ 会社と会員の間で発生した電子商取引紛争と関連して会員の被害救済申請がある場合には公正取引委員会または市·道知事が依頼する紛争調停機関の調整に従うことができます。 ④ 会社はサービス内で会員間で発生する紛争および会員自らの過失による被害に対して関与したり、これに対して一切の責任を負いません。 ただし、サービス利用中に他の会員の本約款および関連法令などの違反行為による被害を受けた場合、会員はこれを会社に情報提供することができ、その場合、会社は申告内容を確認し、本約款などによる措置を取ることができます。 ⑤ 会員はオンラインでのお問い合わせを通じて、会社が提供するサービスに関する様々なお問い合わせを含め、要請及び提案を行うことができます。 [Eメール及びチャットに関するお問い合わせ] 相談利用時間:月~金曜日(11:00~17:00)、土/日/祝日休み 第26条（免責） ① 会社は関連法令及び行政規則に従って会社が責任を負担する場合を除き、通信販売仲介者としてサービスを基盤とした取引システムのみを提供するだけであり、実際の取引の進行には関与しません。 ② 戦時、事変、天災地変、国家非常事態、解決が困難な技術的欠陥、その他不可抗力的理由でサービスを提供できない場合は、会社の責任が免除されます。 ③ 会社は、会員の責に帰すべき事由によるサービスの中止/利用障害について責任を負いません。 ④ 基幹通信事業者が電気通信サービスを中止し、又は正常に提供せず会員に損害が発生した場合には、会社の責任が免除されます。 ⑤ 事前に告知されたサービス用設備の補修、交換、定期点検、工事などやむを得ない理由でサービスが中止されたり障害が発生した場合は会社の責任が免除されます。 ⑥ 会社は、関連法令に基づいて会社が責任を負う場合を除き、会員、パートナー、または第三者がこのサービス内またはウェブサイト上に掲示または送信した情報、資料、事実の信頼度、正確性などの内容については責任を負いません。 ⑦ 会社は会員相互間または会員と第三者間でサービスを媒介に発生した紛争に対して介入する義務がなく、これによる損害を賠償する責任も負いません。 第27条（裁判権及び準拠法） ① 会社と会員、パートナーと会員との間で提起された、本約款に基づく取引に関する訴訟には大韓民国法を準拠法とします。 ② 会社と「会員間で発生した紛争については、ソウル中央地方裁判所を第1審管轄裁判所とします。 本約款は2022年12月7日から施行されます。</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-footer" style="z-index: 9999999; padding-bottom: calc(env(safe-area-inset-bottom))">
+                <button type="button" onclick="closeCustomModal('#popup-terms');"> 同意</button>
+            </div>
+        </div>
+    </div>
+    <div class="popup-dim-wrap" id="popup-policy" style="display: none; z-index: 999999">
+        <div class="popup-content-wrap" style="padding-bottom: calc(env(safe-area-inset-bottom))">
+            <div class="popup-header"> プライバシーポリシー
+                <button type="button" onclick="closeCustomModal('#popup-policy');"><img
+                        src=" /assets/theme/powderroom/images/icon-top-close-black.png" alt=""></button>
+            </div>
+            <div class="popup-content mypage-popup" style="background: white">
+                <div class="form-box">
+                    <div class="form-item">
+                        <pre style="line-height: 150%; width: 100%; white-space: pre-wrap">株式会社PAWCOMPANY（以下「会社」といいます。）は、会社がホームページまたはモバイルアプリケーションを通じて提供するPowderroom JPサービス（以下「サービス」といいます。）を利用する利用者（以下「会員」といいます。）の個人情報を非常に重要なものと考え、以下のようなプライバシーポリシーを定めております。これにより、お客様からお預かりした個人情報について、どのような用途や方法で利用され、個人情報の保護のためにどのような措置がとられているかをお知らせいたします。本プライバシーポリシーは、個人情報の保護に関する法律、または指針の変更、会社の政策変化によって変更になることがありますので、会員の方々にはサービス利用時に随時ご確認をお願いいたします。 本プライバシーポリシーは、Powderroom JP サービスに適用されます。 第1条（個人情報の収集・利用の目的） [必須収集項目] ① 新規会員登録及びサービス利用過程において、会員から収集•利用する個人情報は下記の通りです。 サービス及びコミュニティへの登録 収集・利用の目的 : サービスの会員登録 収集・利用項目 : メールアドレス、ニックネーム 保存期間 : 退会後1ヶ月、及び関係法令によって定められた期間 体験団の応募また当選 収集・利用目的 : 体験団の応募確認、当選者の商品提供及び配送、運営 収集・利用項目 : メールアドレス、姓名、生年月日、電話番号、住所、SNSアカウント 保存期間 : イベント終了後１年間保管 お客様相談 収集・利用目的 : お問い合わせ対応及びお客様相談 収集・利用項目 : メールアドレス、相談内容 保存期間 : 関係法令によって定められた、お問い合わせの受付から3年間 自動的に生成される情報 収集・利用の目的 : サービス利用及び相談、不正利用の確認・防止、統計・分析 収集・利用項目 : クッキー、サービス利用記録(アクセス日時、IP、不良利用記録など)、機器情報(固有機器識別値、OSバージョン) 保存期間 : 関連法令に基づいた保存期間、及び退会後1ヶ月 [任意収集項目] 会員情報修正の際 収集・利用の目的 : ご利用者の識別、及びお客様相談、体験団商品発送、新旧サービスの開発、及びオーダーメイドサービスの提供、統計学的特性に基づくサービス提供、及び広告記載、サービスの有効性確認、イベントの参加機会、及び広告性情報の提供、接触頻度の把握、会員のサービス利用についての統計、会員のビューティープロフィール情報についてのメーリングサービス 収集・利用項目 : 生年月日、性別、肌タイプ、肌/ヘアのお悩み、関心カテゴリー、パーソナルカラー、目のタイプ 保存期間 : 脱退時即廃棄 広告通知 収集・利用の目的 : サービス関連の広告通知を送信 収集・利用項目 : メール、アプリのプッシュ 保存期間 : 関連法令に基づいた保存期間、または退会後3か月以内 ② 会社は利用規約の同意手続きを通じて同意の意思を表明した会員のサービス登録のために入力した情報を作成するのに利用し、会員は作成されたAccountで会社が提供するサービスを連携し、利用することができます。 第2条（個人情報の目的以外の利用及び第三者への提供） ① 会社はサービス会員の別途同意がある場合や法令の定める場合などを除き、会員の個人情報を第三者に提供することはありません。 ② 会社は、会員のサービス利用のために必要な場合、会員の同意を得る等適法な手続きを経て、以下のように個人情報を提供することが可能です。 ③ 個人情報の第三者への提供に関する同意を拒否される場合にも基本サービスを利用可能ですが、第三者への提供に規範したサービスの利用、及び提供に制限が生じることがあります。 ④ サービス利用の際第三者への提供に同意される場合、該当サービスの提供業者への下記の個人情報が提供されます。提供された者の詳細情報は利用者が購入、イベント申請及び、個人的にアクションを取った場合別途告知されます。 提供受付会社 : 体験団実行/広告エージェント 収集・利用目的 : 体験団商品発送、レビューコンテンツの提供、広告性情報の伝送 収集・利用項目 : メールアドレス、姓名、生年月日、電話番号、住所、SNSアカウントUR、肌タイプ、肌/ヘアのお悩み 保存期間 : サービス提供完了後１年間保管 第3条（情報主体の権利） ① 会員はサービスにログインし、「MY&gt;ログインアカウント管理、配送置管理、プロフィール修正」で個人情報を閲覧・訂正することができます。ただし、会員ID（メールアドレス）は、訂正できません。 ② 関連法令により求められる場合、その法令が与える要件と制限に応じて、会員は会社に個人情報関連の権利を行使することができます。例えば韓国では、会員は会社に個人情報の取り扱いの停止及び削除、個人情報の収集、利用に関する同意の撤回を要求することができます。 ③ 会員は入力した個人情報に間違いがある場合、訂正を求めることができますが、訂正前/後の個人情報が間違いに該当しない場合や、こうした手続きを悪用する場合は、会社は間違いの訂正が不可能な理由を遅滞なく通知します。 ④ 本条の権利は support@powderroom.io に連絡することで、行使できます。 第4条（個人情報の破棄） ① 会社は原則的に個人情報の利用目的が達成された後、または会員の退会(退会申込、強制退会を含む)時に、当該情報を閲覧または利用できないように遅滞なく破棄します。関係法令の遵守及び個人情報の収集目的を達成するために、下記に明示した一定期間保管した後、破棄します。 不正利用を防止するために、退会の申込から1カ月間、会員登録時に入力した情報を保存 関係法令に基づいて保存 ② 電子的ファイルの形で保存された個人情報は、記録を再生することのできない技術的方法を用いて削除し、記録物、印刷物など紙に印刷された個人情報は、シュレッダーで廃棄したり、焼却します。 ③ 会社は利用規約に基づき、会員登録後1年間サービスを利用していない休眠アカウントの個人情報を別途に分離保管します。分離保管された個人情報は、4年間保管した後、破棄します。会社は休眠アカウント会員に有効期限の少なくとも30日前までは通知する必要があり、通知の内容は下記のようです。 個人情報の破棄または分離保管、管理される事実 破棄日時 破棄される個人情報の項目 第5条（個人情報の自動収集装置の設置・運営及びその拒否に関する事項） 会社は会員に関する情報を保存し、随時読み込むクッキー(cookie)を使用します。クッキーは、ウェブサイトサーバーが利用者のコンピュータのブラウザ(Internet Explorer、Safari、Chrome、Firefox等)に転送する小さなテキストファイルです。クッキーは、会員のコンピュータは識別しますが、会員は個人的に識別しません。 (1) クッキーの運営 ① 個人の関心分野に応じて差別化された情報を提供 ② 会員と非会員のアクセス頻度または滞在時間等を分析し、会員の好みや関心分野を把握し、ターゲットマーケティングに活用 ③ 興味を持って閲覧した内容に関する跡を追跡し、次のアクセス時にカスタマイズされたサービスを提供 ④ お客様の習慣を分析し、サービス改善のバロメーターとして活用 (2) クッキーに関する選択権 会員のウェブブラウザを調整することにより、すべてのクッキーを受け入れるか、クッキーが保存されるたびに通知するか、すべてのクッキーをブロックするか、選択することができます。ただし、クッキーの保存を拒否した場合は、ログインが必要な一部のサービスは利用できません。 クッキーの受け入れレベルの設定方法(Internet Explorerの場合)は、以下の通りです。 ① [ツール]メニューの[インターネットオプション]を選択します。 ② [プライバシー]タブをクリックします。 ③ [詳細設定]ボタンをクリックし、「すべてのCookieを受け入れる/低/中/中-高/高/すべてのCookieをブロック」の6段階からレベルを設定します。 (3) クッキーは、ブラウザを終了するかログアウトすると無効になります。 第6条（個人情報保護のための技術的・管理的対策） (1) 会社は、会員の個人情報を取り扱う上で、個人情報の紛失、盗難、漏洩、改ざん、または毀損されないように安全性を確保するために合理的な措置をとることができ、そのための技術的対策としては、次のようなものがあります。 ① 会員の個人情報は、パスワードと暗号化された情報によって保護されています。しかし、会員のパスワードや個人情報は、公共の場でのインターネット使用等、様々な方法で他人に知られる可能性が高いため、保護を徹底することが最も重要です。したがって、会員も個人情報を他人に流出させたり、提供してはならず、本人の個人情報を責任を持って管理する必要があります。このような会員本人のミスや基本的なインターネットの危険性により発生する問題については、会社は責任を負いません。 ② 会員の個人情報は、基本的にパスワードと暗号化された情報によって保護され、ファイルや転送データを暗号化し、重要なデータは別途のセキュリティ機能を用いて保護されています。 ③ 会社はウイルス対策ソフトを利用して、コンピュータウイルスによる被害を防止するための措置をとっており、ウイルス対策ソフトは定期的に更新されます。 ④ 会社はハッキングやウイルス等によって会員の個人情報が流出したり、毀損されることを防ぐために、外部からの侵入検知や侵入遮断システムを設け 、24時間監視し、管理しています。 (2) 会社は、会員の個人情報保護の重要性を認識しており、そのために個人情報を取り扱う従業員を合理的に制限し、個人情報保護責任者が個人情報を取り扱う従業員を対象に教育を定期的に行い、個人情報保護のために最善を尽くしています。また、本ポリシーに明示されている移行事項及び関連従業員の遵守を定期的にチェックし、違反内容がある場合はそれを是正または改善し、その他の必要な措置をとるようにしています。 第7条（権益侵害の救済方法） 会社は、個人情報保護に関して会員が意見や不満を申し立てスムーズにコミュニケーションし、解決できるお客様相談窓口を設けています。 韓国の場合、会員と会社が個人情報保護に関する紛争が発生し個人情報侵害に関する相談が必要な場合は、韓国インターネット振興院の個人情報侵害申告センター、警察庁サイバー安全局等にお問い合わせすることができます。 個人情報侵害申告センター : http://privacy.kisa.or.kr (電話: +82-118) 個人情報紛争調整委員会 : http://www.kopico.go.kr (電話: +82-1833-6972) 大検察庁サイバー捜査課 : http://www.spo.go.kr (電話: +82-1303) 警察庁サイバー安全局 : http://cyber.go.kr (電話: +82-182) 第8条（権益侵害の救済方法） 会社は、個人情報保護責任者を指定し、担当部署から会員の重要な個人情報の保護業務に最善を尽くしています。また、下記の個人情報苦情処理担当部署では、個人情報の閲覧請求業務を担当しています。会員がサービスの個人情報に関するお問い合わせや意見、不満を申し立てたい場合は、下記の連絡先や電子メールまでご連絡ください。迅速かつ誠実に対応いたします。 個人情報保護責任者 姓名 : KIM JUNGEUN 電話 : +82-70-4827-4156 メールアドレス : product@powderroom.co.kr 第9条（個人情報の取扱委託管理） 会社はサービス利用及び契約の履行、会員の便宜を高めるために、必要に応じてプライバシーポリシーに公開した範囲内で、個人情報の取り扱いを韓国国内外の専門業者に委託したり、専門のプラットフォームを活用したりしています。 (1) 個人情報処理委託現況 委託した業務の再委託現況は委託を受け取る者の個人情報処理方針を通して確認可能です。 委託を受け取る者 : NHN Cloud(株) 委託した業務の内容 : ショートメッセージ、及びメールアドレス発送代行 (2) プラットフォーム活用現況 委託を受け取る者 : NHN Cloud(株) 委託した業務の内容:クラウドサーバー運営、及び管理 第10条（告知義務） 本プライバシーポリシーは、2022年12月7日制定され、政府及び会社のポリシー変更に伴い、内容の追加、削除、そして修正がある場合は、ホームページを通じて事前に告知し、会員に重大な影響を与える事項については最小７日前に告知します。 プライバシーポリシー バージョン番号: V2.0 プライバシーポリシー 施行日: 2023.06.30 以前の個人情報の取扱方針 2022.12.07 - 2023.06.29</pre>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-footer" style="z-index: 9999999; padding-bottom: calc(env(safe-area-inset-bottom))">
+                <button type="button" onclick="closeCustomModal('#popup-policy');"> 同意</button>
+            </div>
+        </div>
+    </div>
+    <nav class="nav-wrap nav-wrap-menu"><a class="icon-new-tabbar-home" href="/" hx-boost="true"> <em class="img"></em>
+        <br><span>ホーム</span> </a> <a class="icon-new-tabbar-event" href="/campaign" hx-boost="true"> <em
+            class="img"></em> <br><span>イベント</span> </a>
+        <button type="button" class="write-btn" href="/review/create" hx-get="/review/create"
+                hx-target="#limepie-contents" hx-push-url="true" hx-swap="innerHTML show:window:top"><span><img
+                src="https://cf.powderroom.mobi/assets/theme/powderroom/images/icon-pencil.png" alt="マガジン"></span>
+        </button>
+        <a class="icon-new-tabbar-rank" href="/ranking" hx-boost="true"> <em class="img"></em>
+            <br><span>ランキング</span> </a> <a class="icon-new-tabbar-profile profile active on" href="/mypage"
+                                                xhx-boost="true"> <img class="img dynamic-image loaded on-loaded"
+                                                                       src="/assets/theme/powderroom/images/human_02.png"
+                                                                       data-src="/assets/theme/powderroom/images/human_02.png"
+                                                                       onerror="this.onerror=null; this.src='https://cf.powderroom.mobi/assets/theme/powderroom/images/human_new_02.png';"
+                                                                       alt="ログイン"> <br><span>マイページ</span> </a>
+    </nav>
+    <!-- <button type="button" class="btn-top" onclick="window.scrollTo(0, 0)"><img
+            src="https://cf.powderroom.mobi/assets/theme/powderroom/images/btn-top.png" alt="top"></button> -->
+</div>
+<div class="htmx-loading">
+    <div class="dots-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+<div class="htmx-loading-center">
+    <div class="dots-container">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+<script> $(function () {
+    function checkImages() {
+        const images = Array.from(document.querySelectorAll(".dynamic-image")).filter((img) => !img.classList.contains("loaded") && !img.classList.contains("fail"));
+        images.forEach((img) => {
+            if (img.complete) {
+                if (img.naturalWidth === 0) {
+                    handleImageError(img, 403);
+                } else {
+                    img.classList.add("loaded");
+                    img.classList.add("on-loaded");
+                }
+            } else {
+                img.onload = function () {
+                    this.classList.add("loaded");
+                    this.classList.add("on-loaded");
+                };
+                if (img.onerror) {
+                    img.dataset.onerror = img.onerror;
+                }
+                img.onerror = function () {
+                    handleImageError(this, 404);
+                };
+            }
+        });
+    }
+
+    function initialize() {
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", checkImages);
+        } else {
+            checkImages();
+        }
+        document.addEventListener("htmx:afterSwap", () => {
+            checkImages();
+        });
+    }
+
+    initialize();
+}); </script>
+<div id="ch-plugin" class="notranslate" style="z-index: 10000000 !important;">
+    <div id="ch-plugin-entry">
+        <div style="display: block !important;"></div>
+    </div>
+    <div id="ch-plugin-script" class="ch-messenger-hidden ch-desk-messenger"
+         style="bottom: 134px !important;right: 12px !important;">
+        <!-- <iframe id="ch-plugin-script-iframe" title="Channel chat"
+                style="position:relative!important;height:100%!important;width:100%!important;border:none!important;"></iframe> -->
+    </div>
+    <style data-styled="active" data-styled-version="5.3.9"></style>
+</div>
+</body>
+</html>
